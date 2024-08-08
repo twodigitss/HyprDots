@@ -2,19 +2,23 @@
 
 This is the configuration files i use for my Hyprland daily drive.<br>
 This repository includes:<br>
-- [Hyprland (wayland window manager)](https://hyprland.org/)
-- [Aylur's Gtk Shell (customizable shell)](https://aylur.github.io/ags-docs/)
-- My bashrc that includes shortcuts and my prompt
-- Kitty terminal configuration file
+- [Hyprland (wayland window manager)](https://hyprland.org/).
+- [Aylur's Gtk Shell (customizable shell)](https://aylur.github.io/ags-docs/).
+- My bashrc that includes shortcuts and my prompt.
+- Kitty terminal configuration file.
+- Other stuff.
 <br>
 
 #### Some examples of the vertical status bar and control panel on the right side.
-<img src="Assets/PreviewSamples/red.png" width="195"/>
-<img src="Assets/PreviewSamples/blue.png" width="195"/>
-<img src="Assets/PreviewSamples/green.png" width="195"/>
+<div>
+  <img src="ags/Assets/PreviewSamples/red.png" width="195"/>
+  <img src="ags/Assets/PreviewSamples/blue.png" width="195"/>  
+  <img src="ags/Assets/PreviewSamples/green.png" width="195"/>  
+</div>
+
 
 #### My Workflow:
-<img src="Assets/PreviewSamples/workflow.png" width="593"/>
+<img src="ags/Assets/PreviewSamples/workflow.png" width="593"/>
 
 ## Author notes
 If you are going to use this dotfiles, inside the verticalBar directory exists a file named `"variables.js"`, there is where i store dictionaries of icons and commands to be used through some files that requires them. You might want to rename the configuration directory `("/home/your_name/.config" as example)` to match your actual config directory, where you must move the "ags" folder.<br>
