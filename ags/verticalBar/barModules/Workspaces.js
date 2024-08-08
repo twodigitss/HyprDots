@@ -1,0 +1,43 @@
+const hyprland = await Service.import("hyprland")
+
+/*I REMBER USING THIS FUNCTION FROM THE DOTFILES OF A GUY WHO
+ALSO HAD A VERTICAL BAR, THANK YOU, I WISH I COULD REMEMBER YOUR USER NAME ):
+*/
+export function Workspaces() {
+  const workspaces = ["一", "二", "三", "四", "五"];
+  //const activeWorkspaceId = hyprland.active.workspace.id;
+  //const workspaces = ["一", "二", "三", "四", "五", "六"];
+  //const workspaces = ["1", "2", "3", "4", "5", "6"];
+
+  return Widget.Box({
+    class_name: 'workspaces',
+    homogeneous: true,
+    vertical: true,
+    spacing: 0,
+
+    children: workspaces.map((label, index) => {
+      const wsId = index + 1;
+      const updateClassName = (self) => {
+        if (hyprland.active.workspace.id === wsId) {
+          self.class_name = "focused";
+        } 
+        else {
+          self.class_name = hyprland.workspaces.some(
+            ws => ws.id === wsId && ws.windows !== 0
+            ) ? "occupied" : "static";
+        }
+      };
+      
+      return Widget.Button({
+        attribute: `${wsId}`,
+        label: label,
+        on_clicked: () => { hyprland.messageAsync(`dispatch workspace ${wsId}`); },
+        setup: self => {
+          self.hook(hyprland, () => updateClassName(self));
+        }
+      });
+    })
+  });
+}
+
+

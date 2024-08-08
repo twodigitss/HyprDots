@@ -1,0 +1,266 @@
+/* DECLARACIONES GENERALES*/
+   @define-color accent #8EC07C;
+   @define-color blanco #ffffff;
+   @define-color asul #70a5eb;
+
+
+/* Fuji BG */
+@define-color fujibg-yoru #0F0F0F;
+@define-color fujibg-kesseki #191919;
+@define-color fujibg-iwa #262626;
+@define-color fujibg-tetsu #393939;
+@define-color fujibg-amagumo #4C4C4C;
+@define-color fujibg-gin #767676;
+@define-color fujibg-okami #A0A0A0;
+@define-color fujibg-tsuki #BFBFBF;
+@define-color fujibg-fuyu #CACACA;
+
+/* One Dark */
+@define-color onedark-dark #282c34;
+@define-color onedark-red #e06c75;
+@define-color onedark-green #98c379;
+@define-color onedark-yellow #e5c07b;
+@define-color onedark-blue #61afef;
+@define-color onedark-purple #c678dd;
+@define-color onedark-teal #56b6c2;
+@define-color onedark-grey #abb2bf;
+
+/* Catppuccin
+   Latte */
+@define-color catpuccin-latte-Rosewater #dc8a78;
+@define-color catpuccin-latte-Flamingo #dd7878;
+@define-color catpuccin-latte-Pink #ea76cb;
+@define-color catpuccin-latte-Mauve #8839ef;
+@define-color catpuccin-latte-Red #d20f39;
+@define-color catpuccin-latte-Maroon #e64553;
+@define-color catpuccin-latte-Peach #fe640b;
+@define-color catpuccin-latte-Yellow #df8e1d;
+@define-color catpuccin-latte-Green #40a02b;
+@define-color catpuccin-latte-Teal #179299;
+@define-color catpuccin-latte-Sky #04a5e5;
+@define-color catpuccin-latte-Sapphire #209fb5;
+@define-color catpuccin-latte-Blue #1e66f5;
+@define-color catpuccin-latte-Lavender #7287fd;
+
+/* Frappe */
+@define-color catpuccin-frappe-Rosewater #f2d5cf;
+@define-color catpuccin-frappe-Flamingo #eebebe;
+@define-color catpuccin-frappe-Pink #f4b8e4;
+@define-color catpuccin-frappe-Mauve #ca9ee6;
+@define-color catpuccin-frappe-Red #e78284;
+@define-color catpuccin-frappe-Maroon #ea999c;
+@define-color catpuccin-frappe-Peach #ef9f76;
+@define-color catpuccin-frappe-Yellow #e5c890;
+@define-color catpuccin-frappe-Green #a6d189;
+@define-color catpuccin-frappe-Teal #81c8be;
+@define-color catpuccin-frappe-Sky #99d1db;
+@define-color catpuccin-frappe-Sapphire #85c1dc;
+@define-color catpuccin-frappe-Blue #8caaee;
+@define-color catpuccin-frappe-Lavender #babbf1;
+
+/* Macchiato */
+@define-color catpuccin-macchiato-Rosewater #f4dbd6;
+@define-color catpuccin-macchiato-Flamingo #f0c6c6;
+@define-color catpuccin-macchiato-Pink #f5bde6;
+@define-color catpuccin-macchiato-Mauve #c6a0f6;
+@define-color catpuccin-macchiato-Red #ed8796;
+@define-color catpuccin-macchiato-Maroon #ee99a0;
+@define-color catpuccin-macchiato-Peach #f5a97f;
+@define-color catpuccin-macchiato-Yellow #eed49f;
+@define-color catpuccin-macchiato-Green #a6da95;
+@define-color catpuccin-macchiato-Teal #8bd5ca;
+@define-color catpuccin-macchiato-Sky #91d7e3;
+@define-color catpuccin-macchiato-Sapphire #7dc4e4;
+@define-color catpuccin-macchiato-Blue #8aadf4;
+@define-color catpuccin-macchiato-Lavender #b7bdf8;
+
+/* Mocha */
+@define-color catpuccin-mocha-Rosewater #f5e0dc;
+@define-color catpuccin-mocha-Flamingo #f2cdcd;
+@define-color catpuccin-mocha-Pink #f5c2e7;
+@define-color catpuccin-mocha-Mauve #cba6f7;
+@define-color catpuccin-mocha-Red #f38ba8;
+@define-color catpuccin-mocha-Maroon #eba0ac;
+@define-color catpuccin-mocha-Peach #fab387;
+@define-color catpuccin-mocha-Yellow #f9e2af;
+@define-color catpuccin-mocha-Green #a6e3a1;
+@define-color catpuccin-mocha-Teal #94e2d5;
+@define-color catpuccin-mocha-Sky #89dceb;
+@define-color catpuccin-mocha-Sapphire #74c7ec;
+@define-color catpuccin-mocha-Blue #89b4fa;
+@define-color catpuccin-mocha-Lavender #b4befe;
+
+/* Nord
+   Polar Night */
+@define-color nord-PolarNight-bg1 #2E3440;
+@define-color nord-PolarNight-bg2 #3B4252;
+@define-color nord-PolarNight-bg3 #434C5E;
+@define-color nord-PolarNight-bg4 #4C566A;
+
+/* Snow Storm */
+@define-color nord-SnowStorm-bg5 #D8DEE9;
+@define-color nord-SnowStorm-bg6 #E5E9F0;
+@define-color nord-SnowStorm-bg7 #ECEFF4;
+
+/* Frost */
+@define-color nord-Frost-aqua #8FBCBB;
+@define-color nord-Frost-sky #88C0D0;
+@define-color nord-Frost-blue #81A1C1;
+@define-color nord-Frost-marine #5E81AC;
+
+/* Aurora */
+@define-color nord-Aurora-red #FB616A;
+@define-color nord-Aurora-orange #D08770;
+@define-color nord-Aurora-yellow #EBCB8B;
+@define-color nord-Aurora-green #A3BE8C;
+@define-color nord-Aurora-purple #B48EAD;
+
+/* Gruvbox
+   Base */
+@define-color gruvbox-base-red #CC241D;
+@define-color gruvbox-base-green #98971A;
+@define-color gruvbox-base-yellow #D79921;
+@define-color gruvbox-base-blue #458588;
+@define-color gruvbox-base-purple #B16286;
+@define-color gruvbox-base-aqua #689D6A;
+@define-color gruvbox-base-orange #D65D0E;
+
+/* Dark */
+@define-color gruvbox-dark-bg #282828;
+@define-color gruvbox-dark-gray #928374;
+@define-color gruvbox-dark-red #FB4934;
+@define-color gruvbox-dark-green #B8BB26;
+@define-color gruvbox-dark-yellow #FABD2F;
+@define-color gruvbox-dark-blue #83A598;
+@define-color gruvbox-dark-purple #D3869B;
+@define-color gruvbox-dark-aqua #8EC07C;
+@define-color gruvbox-dark-orange #FE8019;
+@define-color gruvbox-dark-fg #EBDBB2;
+@define-color gruvbox-dark-gray2 #A89984;
+
+/* Light */
+@define-color gruvbox-light-bg #FBF1C7;
+@define-color gruvbox-light-gray #928374;
+@define-color gruvbox-light-red #9D0006;
+@define-color gruvbox-light-green #79740E;
+@define-color gruvbox-light-yellow #B57614;
+@define-color gruvbox-light-blue #076678;
+@define-color gruvbox-light-purple #8F3F71;
+@define-color gruvbox-light-aqua #427B58;
+@define-color gruvbox-light-orange #AF3A03;
+@define-color gruvbox-light-fg #3C3836;
+@define-color gruvbox-light-gray2 #7C6F64;
+
+
+/*i said to chatgpt to redefine the colors i had on 
+  my original colorsheet to this scss format and the 
+  mf gave me colorshchemes i didnt even declared. 
+  Like the following ones:
+*/
+
+/* Solarized
+   Base */
+@define-color solarized-base03 #002B36;
+@define-color solarized-base02 #073642;
+@define-color solarized-base01 #586e75;
+@define-color solarized-base00 #657b83;
+@define-color solarized-base0 #839496;
+@define-color solarized-base1 #93a1a1;
+@define-color solarized-base2 #eee8d5;
+@define-color solarized-base3 #fdf6e3;
+
+/* Colors */
+@define-color solarized-yellow #b58900;
+@define-color solarized-orange #cb4b16;
+@define-color solarized-red #dc322f;
+@define-color solarized-magenta #d33682;
+@define-color solarized-violet #6c71c4;
+@define-color solarized-blue #268bd2;
+@define-color solarized-cyan #2aa198;
+@define-color solarized-green #859900;
+
+/* Dracula
+   Light */
+@define-color dracula-light-Pink #ff79c6;
+@define-color dracula-light-Yellow #f1fa8c;
+@define-color dracula-light-Purple #bd93f9;
+@define-color dracula-light-Orange #ffb86c;
+@define-color dracula-light-Red #ff5555;
+@define-color dracula-light-Green #50fa7b;
+@define-color dracula-light-Cyan #8be9fd;
+@define-color dracula-light-Blue #6272a4;
+
+/* Dark */
+@define-color dracula-dark-Cyan #8be9fd;
+@define-color dracula-dark-Green #50fa7b;
+@define-color dracula-dark-Orange #ffb86c;
+@define-color dracula-dark-Pink #ff79c6;
+@define-color dracula-dark-Purple #bd93f9;
+@define-color dracula-dark-Red #ff5555;
+@define-color dracula-dark-Yellow #f1fa8c;
+@define-color dracula-dark-Blue #6272a4;
+@define-color dracula-dark-bg #282a36;
+@define-color dracula-dark-text #f8f8f2;
+@define-color dracula-dark-cursor #f8f8f0;
+@define-color dracula-dark-black #21222C;
+@define-color dracula-dark-white #ABB2BF;
+@define-color dracula-dark-gray #44475A;
+@define-color dracula-dark-selection #44475A;
+
+/* Rosepine
+   Rose Pine */
+   @define-color rosepine-RosePine-bg #191724;
+   @define-color rosepine-RosePine-text #e0def4;
+   @define-color rosepine-RosePine-muted #6e6a86;
+   @define-color rosepine-RosePine-accent #eb6f92;
+   @define-color rosepine-RosePine-surface #1f1d2e;
+   @define-color rosepine-RosePine-overlay #26233a;
+   @define-color rosepine-RosePine-love #eb6f92;
+   @define-color rosepine-RosePine-gold #f6c177;
+   @define-color rosepine-RosePine-pine #3e8fb0;
+   @define-color rosepine-RosePine-foam #9ccfd8;
+   @define-color rosepine-RosePine-iris #c4a7e7;
+   @define-color rosepine-RosePine-highlights #2a283d;
+   
+   /* Biscuit
+      Biscuit */
+   @define-color biscuit-bg #282c34;
+   @define-color biscuit-text #bbc2cf;
+   @define-color biscuit-cursor #4e4e4e;
+   @define-color biscuit-muted #666666;
+   @define-color biscuit-gray #3a3f4b;
+   @define-color biscuit-accent #ff6c6b;
+   @define-color biscuit-surface #2e323b;
+   @define-color biscuit-overlay #3b4048;
+   @define-color biscuit-highlight #3c4049;
+   @define-color biscuit-hover #404754;
+   @define-color biscuit-light-hover #4e5261;
+   @define-color biscuit-selection #6b7082;
+   @define-color biscuit-comments #5b6268;
+   @define-color biscuit-link #51afef;
+   @define-color biscuit-function #c678dd;
+   @define-color biscuit-keyword #ff6c6b;
+   @define-color biscuit-string #98be65;
+   @define-color biscuit-variable #e06c75;
+   @define-color biscuit-tag #da8548;
+   @define-color biscuit-constant #dcaeea;
+   @define-color biscuit-type #5699af;
+   @define-color biscuit-operator #61afef;
+   @define-color biscuit-number #d19a66;
+   @define-color biscuit-builtin #c678dd;
+   
+   /* Mountain Fuji
+      Mountain */
+   @define-color mountain-fuji-night #0c0d14;
+   @define-color mountain-fuji-snow #dcdfe4;
+   @define-color mountain-fuji-storm #282b33;
+   @define-color mountain-fuji-wood #35373d;
+   @define-color mountain-fuji-wind #4c505f;
+   @define-color mountain-fuji-grass #6d755e;
+   @define-color mountain-fuji-cloud #7e8995;
+   @define-color mountain-fuji-sky #9fa4c4;
+   @define-color mountain-fuji-sakura #c7b4cc;
+   @define-color mountain-fuji-water #a1acc1;
+   @define-color mountain-fuji-moon #d3d0d4;
+   @define-color mountain-fuji-sun #e8b7a7;
+   

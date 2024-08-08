@@ -1,0 +1,90 @@
+" TO LOAD THIS CONFIG FILE ON YOUR 
+" $HOME/.vimrc, add this at the end:
+" source $HOME/.config/cfiles/vim/vimrc"
+
+"==============================="
+
+"This line sets this config path"
+set runtimepath+=$HOME/.config/cfiles/vim
+
+"Enables Syntax Highlighting"
+syntax enable
+
+"Use 24-bit (true-color) mode in the terminal"
+set termguicolors
+
+"Sets colorscheme (found in colors folder)"
+colorscheme jellybeans
+
+"==============================="
+
+"enable line numbers"
+set number
+
+"enable relative line numbers"
+set relativenumber
+
+"Highlighs the current line"
+set cursorline
+
+"Highlighs the current column"
+"set cursorcolumn
+
+"Disable swap file creation"
+set noswapfile
+
+"Highlight matching brackets when cursor is over them"
+set showmatch
+
+"Set the number of spaces that a <Tab> in the file counts for"
+set tabstop=4
+
+"Convert tabs to spaces, set 'tabstop' to 4 spaces, 'shiftwidth' to 4 spaces, and enable auto indent"
+set expandtab ts=4 sw=4 ai
+
+"Enable incremental search"
+set incsearch
+
+"Ignore case when searching"
+set ignorecase
+
+"Show the current mode (e.g., -- INSERT --)"
+set showmode
+
+"Highlight search results"
+set hlsearch
+
+"Enable command-line completion with a menu"
+set wildmenu
+
+"Define the wildmenu completion mode"
+set wildmode=list:longest,full
+
+"Enable folding"
+set foldenable
+
+"Set folding method to manual"
+set foldmethod=manual
+
+"Set the maximum fold nesting level to 10"
+set foldnestmax=10
+
+"Start with folds open to level 2"
+set foldlevelstart=2
+
+"==============================="
+
+"Create an augroup for remembering folds"
+augroup remember_folds
+  "Clear any existing autocmds in this group"
+  autocmd!
+
+  "Save view (including folds) when leaving a buffer"
+  autocmd BufWinLeave * mkview
+
+  "Load view (including folds) when entering a buffer"
+  autocmd BufWinEnter * silent! loadview
+augroup END
+
+"==============================="
+

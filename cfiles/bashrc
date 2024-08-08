@@ -1,0 +1,94 @@
+#!/bin/bash
+#TO LOAD THIS CONFIG FILE ON YOUR 
+#$HOME/.bashrc, add this at the end:
+#source "$HOME/.config/cfiles/bashrc"
+#or wherever you want, just quote the file's route
+
+end='\e[0m';		bold='\e[1m';
+uline='\e[4m';		italic='\e[3m';
+
+white='\e[0;37m'; 	black='\e[0;30m';
+red='\e[0;31m';		green='\e[0;32m';	
+yellow='\e[0;33m';	blue='\e[0;34m';
+purple='\e[0;35m';	cyan='\e[0;36m';
+
+bgwhite='\e[0;30;47m'; 	bgblack='\e[0;37;40m';
+bgred='\e[0;30;41m';	bggreen='\e[0;30;42m';	
+bgyellow='\e[0;30;43m';	bgblue='\e[0;30;44m';
+bgpurple='\e[0;30;45m';	bgcyan='\e[0;30;46m';
+
+
+# Function to return color based on random number
+random_color() {
+    random_num=$(( RANDOM % 7 + 1 ))
+    case $random_num in
+        3) echo -e $bgyellow $yellow;;
+        4) echo -e $bgpurple $purple;;
+        5) echo -e $bggreen $green;;
+        1) echo -e $bgwhite $white;;
+        6) echo -e $bgblue $blue;;
+        7) echo -e $bgcyan $cyan;;
+        2) echo -e $bgred $red;;
+        *) echo -e $end $end;; # Default to no color
+    esac
+}
+
+colors=$(random_color)
+bg=$(echo $colors | awk '{print $1}')
+fg=$(echo $colors | awk '{print $2}')
+
+# /--Prompt Customization-/
+PS1="$bg  $end [\W] > "
+#PS1="$fg$bg$bold 󱑆 \A $fg $end \W λ "
+
+#/---Declarative---/
+xset r rate 350 60
+export EDITOR="vim"
+export OPENER="xdg-open"
+
+
+#/--- ALIAS ---/
+#	----packages----
+alias orphans='sudo pacman -Qtdq'
+alias rmorphans='sudo pacman -Rns $(pacman -Qtdq)'
+alias aur='yay -S'
+alias ins='sudo pacman -S'
+alias rem='sudo pacman -Rcns'
+alias upd='sudo pacman -Sy'
+alias upg='sudo pacman -Syu'
+#	----mountable----
+alias lusb='sudo fdisk -l'
+alias musb='sudo udisksctl mount -b '
+alias unmusb='sudo udisksctl unmount -b '
+#	----apps configuration----
+alias upddiscord='sudo vim /opt/discord/resources/build_info.json'
+alias nqtile='vim $HOME/.config/qtile/config.py'
+alias dw='cd $HOME/.suckless/dwm/ && sudo nvim config.h'
+#	----system----
+alias ls=' ls -lg --group-directories-first --time-style=+%b_%d --color=auto' 
+alias rmd='rm -r'
+alias grep='grep --color=auto'
+alias sudo='sudo -Es'
+alias bat0='echo Battery Remain: $(cat /sys/class/power_supply/BAT0/capacity)'
+alias date='date +"%A %d %b -- %H:%M:%S"'
+alias ewop='$HOME/.config/eww/target/release/eww open example'
+alias ewcl='$HOME/.config/eww/target/release/eww close example'
+alias agsdebug='killall ags && ags -c $HOME/.config/ags/verticalBar/config.js'
+#	----directories----
+alias cdh='cd $HOME/'
+alias cdd='cd $HOME/Downloads/'
+alias cdD='cd $HOME/.config/'
+alias cdp='cd $HOME/Pictures/'
+alias cdw='cd $HOME/Pictures/wallpapers'
+alias cdg='cd $HOME/GithubRepo'
+alias cda='cd $HOME/.config/ags/'
+alias cdgb='cd $HOME/GithubRepo/bunnydelic && clear && ./source'
+alias vimew='cd $HOME/.config/eww/target/release && vim ../../eww.yuck'
+#alias pic='~/Pictures/'
+#alias wall='~/Pictures/wallpapers/'
+#alias fonts='~/.fonts/'
+
+cd() { builtin cd "$@" && ls; }
+
+
+
