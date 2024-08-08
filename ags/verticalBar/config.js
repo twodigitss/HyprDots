@@ -1,4 +1,4 @@
-/*HO-ISH ASS NIGAA, IM JUST TIRED OF THIS TALKING SHIT*/
+/*normal comment to start a file */
 import { controlPanel } from "./controlPanel.js"
 import { NotificationPopups } from "./notificationPopups.js"
 
