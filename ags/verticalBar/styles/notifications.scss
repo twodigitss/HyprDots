@@ -27,11 +27,12 @@ window.notification-popups box.notifications {
 
 .notification {
     min-width: 300px;
-    border-radius: 11px;
-    padding: 0.7em;
+    border-radius: 8px;
+    padding: 1em;
     margin: .5em;
-    border: 1px solid @wm_borders_edge;
-    background-color: @theme_bg_color;
+    border: 0px solid @wm_borders_edge;
+    background-color: #191919;
+    box-shadow: 2px 2px 2px #2a2a2a;
 }
 
 .notification.critical {

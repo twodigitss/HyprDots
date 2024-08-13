@@ -3,18 +3,32 @@ const hyprland = await Service.import("hyprland")
 /*I REMBER USING THIS FUNCTION FROM THE DOTFILES OF A GUY WHO
 ALSO HAD A VERTICAL BAR, THANK YOU, I WISH I COULD REMEMBER YOUR USER NAME ):
 */
-export function Workspaces() {
-  const workspaces = ["一", "二", "三", "四", "五"];
-  //const activeWorkspaceId = hyprland.active.workspace.id;
-  //const workspaces = ["一", "二", "三", "四", "五", "六"];
-  //const workspaces = ["1", "2", "3", "4", "5", "6"];
 
+export function WorkspacesLabel() {
+  return Widget.Label({
+    class_name: 'workspaceLB',
+    vpack: "center",
+    hpack: "center",
+    setup: self => {
+      self.hook(
+        hyprland, () => {
+          let wsid = hyprland.active.workspace.name
+          self.label = wsid
+        }
+      );
+    }
+  });
+}
+
+export function Workspaces(){
+  const workspaces = ["一", "二", "三", "四"];
+  //const workspaces = ["1","2","3","4","5"];
   return Widget.Box({
     class_name: 'workspaces',
     homogeneous: true,
     vertical: true,
+    vpack: "center",
     spacing: 0,
-
     children: workspaces.map((label, index) => {
       const wsId = index + 1;
       const updateClassName = (self) => {
@@ -27,7 +41,6 @@ export function Workspaces() {
             ) ? "occupied" : "static";
         }
       };
-      
       return Widget.Button({
         attribute: `${wsId}`,
         label: label,

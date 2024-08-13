@@ -1,0 +1,150 @@
+/*#########################
+###     C O L O R S     ###
+##########################*/
+
+/*  Mocha */
+@import "./colorsheet.scss";
+/*$cornerRad: 10px;*/
+
+/*#########################
+###      DEFAULTS       ###
+##########################*/
+
+levelbar block,
+highlight {
+    min-height: 10px;
+}
+
+window.bar {
+    background-color: #191919;
+    color: #fffeee; 
+    box-shadow: -2px -2px 2px #2a2a2a;
+}
+
+label {
+    font-weight: bold;
+}
+
+button {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+/*#########################
+###     TAB WIDGETS     ###
+##########################*/
+
+.tabLabel{
+    background-color: #262626;
+    padding: 5px 0px 5px 0px ;
+    margin: 0px 5px 0px 5px;
+    border-radius: 5px 5px 0px 0px ;
+
+}
+
+.tabIcon{
+    padding: 5px 0px 5px 0px ;
+    margin: 0px 5px 0px 5px;
+    border-radius: 0px 0px 5px 5px;
+    background-color: @accent;
+    box-shadow: inset 2px 2px 2px @shade;
+}
+
+/*#########################
+###      WORKSPACES     ###
+##########################*/
+
+.workspaces{
+    background-color: #222222;
+    padding: 0px 0px 0px 0px ;
+    margin: 7px;
+    border-radius: 5px;
+}
+
+.workspaces button.focused {
+    padding: 0px;
+    background-color: @accent;
+    border-radius: 5px;
+    color: black;
+    box-shadow: inset 2px 2px 2px @shade;
+    /*border-left: 2px solid @accent;
+    border-radius: 2px 0px 0px 2px;*/
+    /*box-shadow: inset 10px 0 6px -10px @accent;*/
+}
+
+.workspaces .focused, .occupied, .static{
+        border:0px solid transparent;
+        background-color: transparent;
+        /*box-shadow: inset 2px 4px 8px #121212;*/
+}
+
+.workspaceLB{
+    margin-top: 10px;/**/
+    padding: 05px 10px 05px 10px;
+    background-color: #2a2a2a;
+    border-radius: 010px 010px 010px 010px;
+    
+}
+
+/*#########################
+###      BATTERIES      ###
+##########################*/
+
+levelbar block{ 
+    background-color: transparent;
+    border-radius: 5px;
+}
+
+levelbar trough{ 
+    background-color: transparent; 
+    border-color: transparent;
+}
+
+levelbar .empty{ 
+    background-color: #262626; 
+    border: 0px solid transparent;
+}
+
+levelbar .filled {
+    margin: 1px;
+    border: 0px solid transparent;
+    background-color: @accent;
+    -gtk-secondary-caret-color: @accent;
+    box-shadow: inset 2px 2px 2px 2px @shade;
+
+}
+
+.BatteryBox{ 
+    margin: 10px; 
+}
+
+.BatteryBox .verticalBatteryIcon{ 
+    margin-bottom: 7px; 
+}
+
+/*UNUSED*/
+.circularBattery{
+    min-width: 32px;
+    min-height: 32px;
+    font-size: 6px;
+    margin: 0px;
+    background-color: #131313;
+    color: #f0ead6;
+}
+
+
+/*#########################
+###        MEDIAP       ###
+##########################*/
+
+.Media{
+    padding: 10px;
+    /*background-color: #262626;
+    border-radius: 10px;*/
+}
+.MediaButton{
+    background-color: @accent;
+    border-radius: 5px;
+    box-shadow: inset 2px 2px 2px @shade;
+    border: 0px solid transparent;
+}

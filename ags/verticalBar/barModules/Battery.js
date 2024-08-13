@@ -21,19 +21,20 @@ export function verticalLevelBattery() {
         vertical: true,
         visible: battery.bind("available"),
         children: [
-            Widget.LevelBar({
-                class_name: "verticalBattery" ,
-                inverted: true,
-                vertical: true,
-                widthRequest: 10,
-                heightRequest: 100,
-                vpack: "center",
-                value,
-            }),
             Widget.Icon({ 
                 class_name: "verticalBatteryIcon",
                 icon: icon, 
             }),
+            Widget.LevelBar({
+                class_name: "verticalBattery" ,
+                inverted: false,
+                vertical: true,
+                widthRequest: 10,
+                heightRequest: 75,
+                vpack: "center",
+                value,
+            }),
+            
         ],
     })
 }

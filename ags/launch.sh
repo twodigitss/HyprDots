@@ -3,8 +3,12 @@
 # Define el nombre del proceso
 process_name="ags"
 
+# Bar folder
+bar="verticalBar"
+#bar="horizontalBar"
+
 # Define el comando para iniciar el proceso con la configuración especificada
-start_command="ags -c $HOME/.config/ags/verticalBar/config.js &"
+start_command="ags -c $HOME/.config/ags/$bar/config.js &"
 
 # Verifica si el proceso está corriendo
 if pgrep -x "$process_name" > /dev/null; then

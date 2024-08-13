@@ -13,8 +13,10 @@ syntax enable
 "Use 24-bit (true-color) mode in the terminal"
 set termguicolors
 
+set background=light
+
 "Sets colorscheme (found in colors folder)"
-colorscheme jellybeans
+colorscheme plum
 
 "==============================="
 
@@ -85,6 +87,7 @@ augroup remember_folds
   "Load view (including folds) when entering a buffer"
   autocmd BufWinEnter * silent! loadview
 augroup END
+
 
 "==============================="
 

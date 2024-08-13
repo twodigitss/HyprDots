@@ -1,0 +1,108 @@
+/*#########################
+###     C O L O R S     ###
+##########################*/
+
+/*  Mocha */
+@import "../styles/colorsheet.scss";
+/*$cornerRad: 10px;*/
+
+/*#########################
+###      DEFAULTS       ###
+##########################*/
+
+label {
+    font-weight: bold;
+}
+
+button {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+/*#########################
+###     APPLAUNCHER     ###
+##########################*/
+
+@keyframes slide-right {
+    from { margin-left: 0px; }
+    50% { margin-left: 110px; opacity: 1; }
+    50% { opacity: 0.9; }
+    to { margin-left: 200px; }
+}
+
+.Dashboard_button{
+    /*background-color: #262626;
+    border-radius: 10px;*/
+    margin: 0px 4px 0px 4px;
+}
+
+.controlPanel{
+    /*idk if those two thing do work*/
+    animation-timing-function: ease-in;
+    animation-name: slide-right;
+    background-color: #1f1f1f;
+}
+
+.session_button{
+    background-color: #262626;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 5px 5px 5px 5px;
+}
+
+.WHOAMI{
+    background-color: #262626;
+    padding: 5px;
+    margin: 0px 5px 0px 5px;
+    border-radius: 10px;
+}
+
+.AppLauncherApptitle{
+    font-size: 13px;
+}
+
+.AppLauncherTypeInBox{
+    border-radius: 5px;
+    background-color: #222222;
+    border: 1px solid @accent;
+}
+
+/*#########################
+###       CALENDAR      ###
+##########################*/
+
+.Calendar{
+    background-color: #2a2a2a;
+    border: none;
+    box-shadow: none;
+    border-radius: 10px;
+    font-size: 13px;
+    font-style: normal;
+    -gtk-secondary-caret-color: @accent;
+}
+
+/*for some reason doesnt want to work*/
+.Calendar :focus{
+    -gtk-secondary-caret-color: @accent;
+}
+
+/*#########################
+###        SLIDER       ###
+##########################*/
+
+/*me voy a matar puto slider del orto*/
+slider{
+    background-color: #4a4a4a;
+    border-color: transparent;
+}
+
+scale {
+    -gtk-secondary-caret-color: @accent;
+    border-color: @accent;    
+}
+
+scale highlight{
+    -gtk-secondary-caret-color: @accent;
+    background-color: @accent;
+    border-color: @accent;    
+}

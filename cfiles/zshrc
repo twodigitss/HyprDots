@@ -22,9 +22,6 @@ alias lusb='sudo fdisk -l'
 alias musb='sudo udisksctl mount -b '
 alias unmusb='sudo udisksctl unmount -b '
 #	----apps configuration----
-alias sql='sudo -u postgres psql -w dvdrental'
-alias awsdatabase='psql -h database-1.cr8zbyiugave.us-east-2.rds.amazonaws.com -p 5432 -U postgres -W postgres'
-alias awsdatabaseEXAMEN='psql -h database-instance-tallerdb.cr8zbyiugave.us-east-2.rds.amazonaws.com -p 5432 -U postgres -W erp_ventas'
 alias upddiscord='sudo vim /opt/discord/resources/build_info.json'
 alias nqtile='vim $HOME/.config/qtile/config.py'
 alias dw='cd $HOME/.suckless/dwm/ && sudo nvim config.h'
@@ -46,5 +43,3 @@ alias cdgb='cd $HOME/GithubRepo/bunnydelic && clear && ./source'
 xset r rate 350 60
 export EDITOR="nvim"
 export OPENER="xdg-open"
-
-#bunnydelic

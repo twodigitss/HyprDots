@@ -4,42 +4,10 @@
 #source "$HOME/.config/cfiles/bashrc"
 #or wherever you want, just quote the file's route
 
-end='\e[0m';		bold='\e[1m';
-uline='\e[4m';		italic='\e[3m';
-
-white='\e[0;37m'; 	black='\e[0;30m';
-red='\e[0;31m';		green='\e[0;32m';	
-yellow='\e[0;33m';	blue='\e[0;34m';
-purple='\e[0;35m';	cyan='\e[0;36m';
-
-bgwhite='\e[0;30;47m'; 	bgblack='\e[0;37;40m';
-bgred='\e[0;30;41m';	bggreen='\e[0;30;42m';	
-bgyellow='\e[0;30;43m';	bgblue='\e[0;30;44m';
-bgpurple='\e[0;30;45m';	bgcyan='\e[0;30;46m';
-
-
-# Function to return color based on random number
-random_color() {
-    random_num=$(( RANDOM % 7 + 1 ))
-    case $random_num in
-        3) echo -e $bgyellow $yellow;;
-        4) echo -e $bgpurple $purple;;
-        5) echo -e $bggreen $green;;
-        1) echo -e $bgwhite $white;;
-        6) echo -e $bgblue $blue;;
-        7) echo -e $bgcyan $cyan;;
-        2) echo -e $bgred $red;;
-        *) echo -e $end $end;; # Default to no color
-    esac
+ls_with_newline() {
+    ls "$@" -gh --group-directories-first --time-style=+%D --color=auto
+    echo
 }
-
-colors=$(random_color)
-bg=$(echo $colors | awk '{print $1}')
-fg=$(echo $colors | awk '{print $2}')
-
-# /--Prompt Customization-/
-PS1="$bg  $end [\W] > "
-#PS1="$fg$bg$bold 󱑆 \A $fg $end \W λ "
 
 #/---Declarative---/
 xset r rate 350 60
@@ -65,30 +33,97 @@ alias upddiscord='sudo vim /opt/discord/resources/build_info.json'
 alias nqtile='vim $HOME/.config/qtile/config.py'
 alias dw='cd $HOME/.suckless/dwm/ && sudo nvim config.h'
 #	----system----
-alias ls=' ls -lg --group-directories-first --time-style=+%b_%d --color=auto' 
+alias ls='ls_with_newline'
 alias rmd='rm -r'
 alias grep='grep --color=auto'
 alias sudo='sudo -Es'
 alias bat0='echo Battery Remain: $(cat /sys/class/power_supply/BAT0/capacity)'
 alias date='date +"%A %d %b -- %H:%M:%S"'
-alias ewop='$HOME/.config/eww/target/release/eww open example'
-alias ewcl='$HOME/.config/eww/target/release/eww close example'
 alias agsdebug='killall ags && ags -c $HOME/.config/ags/verticalBar/config.js'
 #	----directories----
 alias cdh='cd $HOME/'
 alias cdd='cd $HOME/Downloads/'
 alias cdD='cd $HOME/.config/'
+alias cdf='cd $HOME/.config/cfiles/'
 alias cdp='cd $HOME/Pictures/'
 alias cdw='cd $HOME/Pictures/wallpapers'
 alias cdg='cd $HOME/GithubRepo'
 alias cda='cd $HOME/.config/ags/'
 alias cdgb='cd $HOME/GithubRepo/bunnydelic && clear && ./source'
-alias vimew='cd $HOME/.config/eww/target/release && vim ../../eww.yuck'
-#alias pic='~/Pictures/'
-#alias wall='~/Pictures/wallpapers/'
-#alias fonts='~/.fonts/'
+
+export LS_COLORS="\
+di=01;37:\
+ln=01;34:\
+ex=00;33:\
+bd=01;33;40:\
+cd=01;33;40:\
+su=01;37;41:\
+*.jpg=01;37:\
+*.png=00;37:\
+*.txt=00;37\
+"
+ 
+txtblk='\e[0;30m' # Black - Regular
+txtred='\e[0;31m' # Red
+txtgrn='\e[0;32m' # Green
+txtylw='\e[0;33m' # Yellow
+txtblu='\e[0;34m' # Blue
+txtpur='\e[0;35m' # Purple
+txtcyn='\e[0;36m' # Cyan
+txtwht='\e[0;37m' # White
+ 
+bldblk='\e[1;30m' # Black - Bold
+bldred='\e[1;31m' # Red
+bldgrn='\e[1;32m' # Green
+bldylw='\e[1;33m' # Yellow
+bldblu='\e[1;34m' # Blue
+bldpur='\e[1;35m' # Purple
+bldcyn='\e[1;36m' # Cyan
+bldwht='\e[1;37m' # White
+ 
+undblk='\e[4;30m' # Black - Underline
+undred='\e[4;31m' # Red
+undgrn='\e[4;32m' # Green
+undylw='\e[4;33m' # Yellow
+undblu='\e[4;34m' # Blue
+undpur='\e[4;35m' # Purple
+undcyn='\e[4;36m' # Cyan
+undwht='\e[4;37m' # White
+ 
+bakblk='\e[0;37;40m'   # Black - Background
+bakred='\e[0;37;41m'   # Red
+bakgrn='\e[0;37;42m'   # Green
+bakylw='\e[0;30;43m'   # Yellow
+bakblu='\e[0;37;44m'   # Blue
+bakpur='\e[0;37;45m'   # Purple
+bakcyn='\e[0;30;46m'   # Cyan
+bakwht='\e[0;30;47m'   # White
+ 
+end='\e[0m'    # Text Reset
+
+
+# Function to return color based on random number
+random_color() {
+    random_num=$(( RANDOM % 8 + 1 ))
+    case $random_num in
+        3) echo -e $bakylw $txtylw;;
+        4) echo -e $bakpur $txtpur;;
+        5) echo -e $bakgrn $txtgrn;;
+        1) echo -e $bakwht $txtwht;;
+        6) echo -e $bakblu $txtblu;;
+        7) echo -e $bakcyn $txtcyn;;
+        2) echo -e $bakred $txtred;;
+        8) echo -e $bakblk $txtblk;;
+        *) echo -e $end $end;; # Default to no color
+    esac
+}
+
+colors=$(random_color)
+bg=$(echo $colors | awk '{print $1}')
+fg=$(echo $colors | awk '{print $2}')
+
+# /--Prompt Customization-/
+PS1="$bakblk \v $end$bakwht \W $end > "
+#PS1="$bg \v $end \W > "
 
 cd() { builtin cd "$@" && ls; }
-
-
-

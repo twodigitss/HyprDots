@@ -1,0 +1,8 @@
+TO INCLUDE ONE OF THIS THEME FILES INTO YOUR
+.XRESOURCES, FILE ADD THE FOLLOWING LINE AT THE BEGINNING:
+
+#include "/home/your_user/.config/cfiles/xresources/fuji.xresources"
+
+THEN RELOAD WITHOUT KEEPING PREV CONFIG WITH:
+
+xrdb ~/.Xresources
