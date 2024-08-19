@@ -10,46 +10,53 @@ ls_with_newline() {
 }
 
 #/---Declarative---/
+xrdb ~/.Xresources
 xset r rate 350 60
 export EDITOR="vim"
 export OPENER="xdg-open"
 
-
 #/--- ALIAS ---/
 #	----packages----
-alias orphans='sudo pacman -Qtdq'
-alias rmorphans='sudo pacman -Rns $(pacman -Qtdq)'
 alias aur='yay -S'
 alias ins='sudo pacman -S'
-alias rem='sudo pacman -Rcns'
 alias upd='sudo pacman -Sy'
 alias upg='sudo pacman -Syu'
+alias rem='sudo pacman -Rcns'
+alias orphans='sudo pacman -Qtdq'
+alias rmorphans='sudo pacman -Rns $(pacman -Qtdq)'
 #	----mountable----
 alias lusb='sudo fdisk -l'
 alias musb='sudo udisksctl mount -b '
 alias unmusb='sudo udisksctl unmount -b '
 #	----apps configuration----
-alias upddiscord='sudo vim /opt/discord/resources/build_info.json'
 alias nqtile='vim $HOME/.config/qtile/config.py'
-alias dw='cd $HOME/.suckless/dwm/ && sudo nvim config.h'
-#	----system----
-alias ls='ls_with_newline'
-alias rmd='rm -r'
-alias grep='grep --color=auto'
-alias sudo='sudo -Es'
-alias bat0='echo Battery Remain: $(cat /sys/class/power_supply/BAT0/capacity)'
-alias date='date +"%A %d %b -- %H:%M:%S"'
+alias dw='cd $HOME/.suckless/dwm/ && sudo vim config.h'
+alias upddiscord='sudo vim /opt/discord/resources/build_info.json'
 alias agsdebug='killall ags && ags -c $HOME/.config/ags/verticalBar/config.js'
+#	----system----
+alias rmd='rm -r'
+alias sudo='sudo -Es'
+alias ls='ls_with_newline'
+alias grep='grep --color=auto'
+alias date='date +"%A %d %b -- %H:%M:%S"'
+alias bat0='echo Battery: $(cat /sys/class/power_supply/BAT0/capacity)'
 #	----directories----
 alias cdh='cd $HOME/'
-alias cdd='cd $HOME/Downloads/'
+alias cdn='cd /etc/nixos/'
 alias cdD='cd $HOME/.config/'
-alias cdf='cd $HOME/.config/cfiles/'
 alias cdp='cd $HOME/Pictures/'
-alias cdw='cd $HOME/Pictures/wallpapers'
+alias cdd='cd $HOME/Downloads/'
 alias cdg='cd $HOME/GithubRepo'
 alias cda='cd $HOME/.config/ags/'
+alias cdk='cd $HOME/.config/kitty/'
+alias cdf='cd $HOME/.config/cfiles/'
+alias cdw='cd $HOME/Pictures/wallpapers'
 alias cdgb='cd $HOME/GithubRepo/bunnydelic && clear && ./source'
+#	----nixos----
+alias gc='nix-collect-garbage -d'
+alias rb='sudo nixos-rebuild switch'
+alias gcn='sudo nix-collect-garbage --delete-older-than 14d'
+
 
 export LS_COLORS="\
 di=01;37:\

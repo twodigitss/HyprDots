@@ -13,10 +13,11 @@ syntax enable
 "Use 24-bit (true-color) mode in the terminal"
 set termguicolors
 
+"set colorscheme mode: either dark or light
 set background=light
 
 "Sets colorscheme (found in colors folder)"
-colorscheme plum
+colorscheme jellybeans
 
 "==============================="
 
@@ -90,4 +91,12 @@ augroup END
 
 
 "==============================="
+"Dvorak keybinds for movement"
+"noremap h <left>
+"noremap t <down>
+"noremap n <up>   
+"noremap s <right>
+
+"noremap l n
+"noremap L N
 
