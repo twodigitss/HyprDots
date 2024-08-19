@@ -16,7 +16,7 @@ const top = Widget.Box({
         //Widget.Separator({ vertical: false }),
         myIdentity,
         SessionButtons(),
-        Applauncher({ width: 200, height: 150 })        
+        Applauncher({ width: 100, height: 200 })        
     ]
 })  
 
@@ -37,7 +37,6 @@ const bottom = Widget.Box({
             orientation: "center"
         }),   
         Volslider(),
-        //Media(),
         calendar,
     ],
         
@@ -53,7 +52,6 @@ function TheBoxThatContainsAllWidgets(){
 
     })
 }
-
 
 // there needs to be only one instance
 export const controlPanel = Widget.Window({

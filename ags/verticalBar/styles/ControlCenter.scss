@@ -4,11 +4,18 @@
 
 /*  Mocha */
 @import "../styles/colorsheet.scss";
-/*$cornerRad: 10px;*/
+/*@define- cornerRad 10px;*/
+/*$corner-radius: 10px !default;*/
 
 /*#########################
 ###      DEFAULTS       ###
 ##########################*/
+@keyframes slide-right {
+    from { margin-left: 0px; }
+    50% { margin-left: 110px; opacity: 1; }
+    50% { opacity: 0.9; }
+    to { margin-left: 200px; }
+}
 
 label {
     font-weight: bold;
@@ -19,42 +26,23 @@ button {
     box-shadow: none;
 }
 
-/*#########################
-###     APPLAUNCHER     ###
-##########################*/
-
-@keyframes slide-right {
-    from { margin-left: 0px; }
-    50% { margin-left: 110px; opacity: 1; }
-    50% { opacity: 0.9; }
-    to { margin-left: 200px; }
-}
-
-.Dashboard_button{
-    /*background-color: #262626;
-    border-radius: 10px;*/
-    margin: 0px 4px 0px 4px;
-}
-
 .controlPanel{
     /*idk if those two thing do work*/
     animation-timing-function: ease-in;
     animation-name: slide-right;
     background-color: #1f1f1f;
+    border-right: 2px solid #444444;
 }
 
-.session_button{
-    background-color: #262626;
-    border-radius: 10px;
-    padding: 5px;
-    margin: 5px 5px 5px 5px;
-}
+/*#########################
+###     APPLAUNCHER     ###
+##########################*/
 
-.WHOAMI{
+.appLauncher{
+    padding: 10px;
     background-color: #262626;
-    padding: 5px;
-    margin: 0px 5px 0px 5px;
-    border-radius: 10px;
+    border-radius: 7px;
+    /*border: 1px solid #444444;*/
 }
 
 .AppLauncherApptitle{
@@ -63,8 +51,42 @@ button {
 
 .AppLauncherTypeInBox{
     border-radius: 5px;
-    background-color: #222222;
+    background-color: #262626;
     border: 1px solid @accent;
+}
+
+/*#########################
+###       BUTTON        ###
+##########################*/
+
+.Dashboard_button{
+    /*background-color: #262626;
+    border-radius: 10px;*/
+    margin: 0px 4px 0px 4px;
+}
+
+.sessionButton{
+    background-color: #c8ccd6;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 2px 0px 2px 0px;
+}
+
+/*#########################
+###      USER BAGDE     ###
+##########################*/
+
+.WHOAMI{
+    background-color: #262626;
+    padding: 5px;
+    margin: 0px 0px 2px 0px;
+    border-radius: 7px;
+}
+
+.sessionBox{
+    background-color: #262626;
+    border-radius: 7px;
+    /*border: 1px solid #444444;*/
 }
 
 /*#########################
@@ -105,4 +127,9 @@ scale highlight{
     -gtk-secondary-caret-color: @accent;
     background-color: @accent;
     border-color: @accent;    
+}
+
+.VolSliderBox{
+    background-color: #262626;
+    border-radius: 7px;
 }

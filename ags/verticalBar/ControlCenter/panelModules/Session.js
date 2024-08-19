@@ -2,11 +2,10 @@ import {icons, comm} from "../../variables.js"
 
 function SButton(route,command) { 
     return Widget.Button({
-        class_name: "session_button",
+        class_name: "sessionButton",
         child: Widget.Icon({ 
             icon: route, 
-            css: "margin: 0px;",
-            size: 23,
+            size: 22,
         }),
         on_primary_click: (_, event) => {
             Utils.exec(command)
@@ -16,6 +15,7 @@ function SButton(route,command) {
 
 export function SessionButtons(){
     return Widget.Box({
+        class_name: "sessionBox",
         vertical: false,
         homogeneous: true,
         spacing: 0,

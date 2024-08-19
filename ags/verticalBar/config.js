@@ -27,9 +27,8 @@ const start  = [
     verticalLevelBattery(),
     
 ]
-const center = [   
-    //Volslider(),
-    //Media(),
+const center = [  
+    Media(),
 ]
 const bottom = [
     lortabs(icons["time"], comm["time"]), 

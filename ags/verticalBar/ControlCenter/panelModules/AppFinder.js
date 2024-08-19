@@ -66,6 +66,7 @@ const entry = Widget.Entry({
 export const Applauncher = ({ width = 200, height = 250}) => {
     /*aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa */
     return Widget.Box({
+        class_name: "appLauncher",
         vertical:true,
         css: `margin-top: 5px;`,
         children: [

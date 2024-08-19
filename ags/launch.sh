@@ -1,9 +1,11 @@
-#!/bin/bash
 
-# Define el nombre del proceso
-process_name="ags"
+#NIXOS ags package when its running looks like this...
+process_name=".ags-wrapped"
 
-# Bar folder
+#AND this is how a normal person should run it...
+#process_name="ags"
+
+#Bar folder
 bar="verticalBar"
 #bar="horizontalBar"
 

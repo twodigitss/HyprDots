@@ -9,13 +9,18 @@ function widcon( route ) {
     })
 }
 
-/*  IN THIS LABEL, PUT YOUR NAME, I AM TOO LAZY TO
-    FETCH IT BY MYSELF 
-*/
+const asd = Widget.Box({
+    spacing: 10,
+    css: "margin-left: 5px;",
+    children: [
+        widcon(icons["user"]),
+    ]
+})
+
 export const myIdentity = Widget.CenterBox({
     class_name: "WHOAMI",
-    start_widget: widcon(icons["user"]),
+    start_widget: asd,
     center_widget: Widget.Label({
-        label: "Ross Lewis"
+        label: "Ludwig"
     }),
 })

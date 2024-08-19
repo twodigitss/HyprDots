@@ -12,6 +12,7 @@ function getVolIcon() {
         return `audio-volume-${icons[icon]}-symbolic`
     }
     return Widget.Icon({
+        css: "margin-left: 10px;",
         icon: Utils.watch(theIconInQuestion(), audio.speaker, theIconInQuestion),
     })
 }
@@ -19,12 +20,12 @@ function getVolIcon() {
 export function Volslider(){ 
     const mySlider = Widget.Slider({
         draw_value: false,
-        hpack: "center", 
+        hexpand: true,
         //added this 4 lines
         vertical: false,
         inverted: false,
         heightRequest: 10,
-        widthRequest: 150,
+        widthRequest: 100,
         //here goes normale
         on_change: ({ value }) => audio.speaker.volume = value,
         setup: self => self.hook(audio.speaker, () => {
@@ -34,7 +35,7 @@ export function Volslider(){
     return Widget.Box({
         /* unused class by the way */
         class_name: "VolSliderBox",
-        hpack: "center", 
+        hpack: "left", 
         children: [getVolIcon(), mySlider],
     })
 }

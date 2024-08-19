@@ -22,7 +22,7 @@ export function WorkspacesLabel() {
 
 export function Workspaces(){
   const workspaces = ["一", "二", "三", "四"];
-  //const workspaces = ["1","2","3","4","5"];
+  //const workspaces = ["1","2","3","4"];
   return Widget.Box({
     class_name: 'workspaces',
     homogeneous: true,
