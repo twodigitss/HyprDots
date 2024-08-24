@@ -14,10 +14,10 @@ syntax enable
 set termguicolors
 
 "set colorscheme mode: either dark or light
-set background=light
+set background=dark
 
 "Sets colorscheme (found in colors folder)"
-colorscheme jellybeans
+colorscheme vscode
 
 "==============================="
 

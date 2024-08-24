@@ -72,6 +72,11 @@ export const controlPanel = Widget.Window({
 })
 
 // CONFIGURATION
+const thisDir = "/home/lewis/.config/ags/verticalBar"
+const scss = `${thisDir}/styles/ControlCenter.scss`
+const css = `${thisDir}/styles/css/controlcenter.css`
+Utils.exec(`sassc ${scss} ${css}`)
+
 App.config({
-    style: "./styles/ControlCenter.scss",
+    style: css,
 })

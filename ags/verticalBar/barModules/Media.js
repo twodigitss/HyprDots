@@ -8,6 +8,7 @@ const play = Widget.Button({
     },
     child: Widget.Icon({
         icon: icons["play"],
+        size: 15,
     })
 })
 
@@ -18,6 +19,7 @@ const next = Widget.Button({
     },
     child: Widget.Icon({
         icon: icons["next"],
+        size: 15,
     })
 })
 
@@ -28,6 +30,7 @@ const prev = Widget.Button({
     },
     child: Widget.Icon({
         icon: icons["prev"],
+        size: 15,
     })
 })
 

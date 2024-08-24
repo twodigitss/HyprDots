@@ -5,7 +5,7 @@
 #or wherever you want, just quote the file's route
 
 ls_with_newline() {
-    ls "$@" -gh --group-directories-first --time-style=+%D --color=auto
+    ls "$@" -lh --group-directories-first --time-style=+%D --color=auto
     echo
 }
 
@@ -32,9 +32,11 @@ alias unmusb='sudo udisksctl unmount -b '
 alias nqtile='vim $HOME/.config/qtile/config.py'
 alias dw='cd $HOME/.suckless/dwm/ && sudo vim config.h'
 alias upddiscord='sudo vim /opt/discord/resources/build_info.json'
-alias agsdebug='killall ags && ags -c $HOME/.config/ags/verticalBar/config.js'
+#alias agsdebug='killall .ags-wrapped && ags -c $HOME/.config/ags/hbar/config.js'
+alias agsdebug='killall ags && ags -c $HOME/.config/ags/hbar/config.js'
 #	----system----
 alias rmd='rm -r'
+alias ta='tar -xf'
 alias sudo='sudo -Es'
 alias ls='ls_with_newline'
 alias grep='grep --color=auto'
@@ -42,7 +44,6 @@ alias date='date +"%A %d %b -- %H:%M:%S"'
 alias bat0='echo Battery: $(cat /sys/class/power_supply/BAT0/capacity)'
 #	----directories----
 alias cdh='cd $HOME/'
-alias cdn='cd /etc/nixos/'
 alias cdD='cd $HOME/.config/'
 alias cdp='cd $HOME/Pictures/'
 alias cdd='cd $HOME/Downloads/'
@@ -51,12 +52,14 @@ alias cda='cd $HOME/.config/ags/'
 alias cdk='cd $HOME/.config/kitty/'
 alias cdf='cd $HOME/.config/cfiles/'
 alias cdw='cd $HOME/Pictures/wallpapers'
+alias cdn='sudoedit /etc/nixos/configuration.nix'
 alias cdgb='cd $HOME/GithubRepo/bunnydelic && clear && ./source'
 #	----nixos----
 alias gc='nix-collect-garbage -d'
 alias rb='sudo nixos-rebuild switch'
+alias gendir='cd /nix/var/nix/profiles/'
 alias gcn='sudo nix-collect-garbage --delete-older-than 14d'
-
+alias gen='sudo nix-env --list-generations --profile /nix/var/nix/profiles/system'
 
 export LS_COLORS="\
 di=01;37:\
@@ -130,7 +133,7 @@ bg=$(echo $colors | awk '{print $1}')
 fg=$(echo $colors | awk '{print $2}')
 
 # /--Prompt Customization-/
-PS1="$bakblk \v $end$bakwht \W $end > "
+PS1="$bakwht \v $end$bakblk \W $end > "
 #PS1="$bg \v $end \W > "
 
 cd() { builtin cd "$@" && ls; }

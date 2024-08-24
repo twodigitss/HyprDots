@@ -13,7 +13,7 @@ export function WorkspacesLabel() {
       self.hook(
         hyprland, () => {
           let wsid = hyprland.active.workspace.name
-          self.label = wsid
+          self.label = `Workspace ${wsid}`
         }
       );
     }

@@ -1,91 +1,137 @@
-/* DECLARACIONES GENERALES*/
-   @define-color accent #f2d5cf;
-   @define-color shade transparent;
+// ONE DARK COLORSCHEME
+$onedark: (
+   dark:   #282c34,
+   red:    #e06c75,
+   green:  #98c379,
+   yellow: #e5c07b,
+   blue:   #61afef,
+   purple: #c678dd,
+   teal:   #56b6c2,
+   grey:   #abb2bf
+);
 
-/* Fuji BG */
-   @define-color fujibg-yoru #0F0F0F;
-   @define-color fujibg-kesseki #191919;
-   @define-color fujibg-iwa #262626;
-   @define-color fujibg-tetsu #393939;
-   @define-color fujibg-amagumo #4C4C4C;
-   @define-color fujibg-gin #767676;
-   @define-color fujibg-okami #A0A0A0;
-   @define-color fujibg-tsuki #BFBFBF;
-   @define-color fujibg-fuyu #CACACA;
+//NORD COLORSCHEME
+$nord: (  
+   Frost: (
+      aqua:   #8FBCBB,
+      sky:    #88C0D0,
+      blue:   #81A1C1,
+      marine: #5E81AC
+   ),
+   Aurora: (
+      red:    #FB616A,
+      orange: #D08770,
+      yellow: #EBCB8B,
+      green:  #A3BE8C,
+      purple: #B48EAD
+   )
+);
 
-/* One Dark */
-   @define-color onedark-dark #282c34;
-   @define-color onedark-red #e06c75;
-   @define-color onedark-green #98c379;
-   @define-color onedark-yellow #e5c07b;
-   @define-color onedark-blue #61afef;
-   @define-color onedark-purple #c678dd;
-   @define-color onedark-teal #56b6c2;
-   @define-color onedark-grey #abb2bf;
+//MOUNTAIN FUJI COLORSCHEME
+$mountainfuji: (
+   alphas: (
+      ume:     #8F8AAC,
+      kosumosu:#AC8AAC,
+      chikyu:  #ACA98A,
+      kaen:    #AC8A8C,
+      aki:     #C6A679,
+      mizu:    #8AACAB,
+      take:    #8AAC8B,
+      shinkai: #8A98AC,
+      iwa:     #262626,
+      usagi:   #E7E7E7
+   ),
+   accents: (
+      ajisai:   #A39EC4,
+      sakura:   #C49EC4,
+      suna:     #C4C19E,
+      ichigo:   #C49EA0,
+      yuyake:   #CEB188,
+      sora:     #9EC3C4,
+      kusa:     #9EC49F,
+      kori:     #A5B4CB,
+      amagumo:  #4C4C4C,
+      yukiFG:   #F0F0F0
+   )
+);
 
-/* Catppuccin
-   Frappe */
-   @define-color catpuccin-frappe-Rosewater #f2d5cf;
-   @define-color catpuccin-frappe-Flamingo #eebebe;
-   @define-color catpuccin-frappe-Pink #f4b8e4;
-   @define-color catpuccin-frappe-Mauve #ca9ee6;
-   @define-color catpuccin-frappe-Red #e78284;
-   @define-color catpuccin-frappe-Maroon #ea999c;
-   @define-color catpuccin-frappe-Peach #ef9f76;
-   @define-color catpuccin-frappe-Yellow #e5c890;
-   @define-color catpuccin-frappe-Green #a6d189;
-   @define-color catpuccin-frappe-Teal #81c8be;
-   @define-color catpuccin-frappe-Sky #99d1db;
-   @define-color catpuccin-frappe-Sapphire #85c1dc;
-   @define-color catpuccin-frappe-Blue #8caaee;
-   @define-color catpuccin-frappe-Lavender #babbf1;
 
-/* Nord
-   Frost */
-   @define-color nord-Frost-aqua #8FBCBB;
-   @define-color nord-Frost-sky #88C0D0;
-   @define-color nord-Frost-blue #81A1C1;
-   @define-color nord-Frost-marine #5E81AC;
+// CATPUCCIN MACCHIATO
+$catpuccin: (
+   macchiato: (
+      Rosewater: #f4dbd6,
+      Flamingo:  #f0c6c6,
+      Pink:      #f5bde6,
+      Mauve:     #c6a0f6,
+      Red:       #ed8796,
+      Maroon:    #ee99a0,
+      Peach:     #f5a97f,
+      Yellow:    #eed49f,
+      Green:     #a6da95,
+      Teal:      #8bd5ca,
+      Sky:       #91d7e3,
+      Sapphire:  #7dc4e4,
+      Blue:      #8aadf4,
+      Lavender:  #b7bdf8
+   )
+);
 
-/* Aurora */
-   @define-color nord-Aurora-red #FB616A;
-   @define-color nord-Aurora-orange #D08770;
-   @define-color nord-Aurora-yellow #EBCB8B;
-   @define-color nord-Aurora-green #A3BE8C;
-   @define-color nord-Aurora-purple #B48EAD;
+// GRUVBOX COLORSCHEME
+$gruvbox: (
+   base: (
+      red:      #CC241D,
+      green:    #98971A,
+      yellow:   #D79921,
+      blue:     #458588,
+      purple:   #B16286,
+      aqua:     #689D6A,
+      orange:   #D65D0E
+   ),
+   dark: (
+      bg:       #282828,
+      gray:     #928374,
+      red:      #FB4934,
+      green:    #B8BB26,
+      yellow:   #FABD2F,
+      blue:     #83A598,
+      purple:   #D3869B,
+      aqua:     #8EC07C,
+      orange:   #FE8019,
+      fg:       #EBDBB2,
+      gray2:    #A89984
+   ),
+   light: (
+      bg:       #FBF1C7,
+      gray:     #928374,
+      red:      #9D0006,
+      green:    #79740E,
+      yellow:   #B57614,
+      blue:     #076678,
+      purple:   #8F3F71,
+      aqua:     #427B58,
+      orange:   #AF3A03,
+      fg:       #3C3836,
+      gray2:    #7C6F64
+   )
+);
 
-/* Gruvbox
-   Base */
-   @define-color gruvbox-base-red #CC241D;
-   @define-color gruvbox-base-green #98971A;
-   @define-color gruvbox-base-yellow #D79921;
-   @define-color gruvbox-base-blue #458588;
-   @define-color gruvbox-base-purple #B16286;
-   @define-color gruvbox-base-aqua #689D6A;
-   @define-color gruvbox-base-orange #D65D0E;
-
-/* Dark */
-   @define-color gruvbox-dark-bg #282828;
-   @define-color gruvbox-dark-gray #928374;
-   @define-color gruvbox-dark-red #FB4934;
-   @define-color gruvbox-dark-green #B8BB26;
-   @define-color gruvbox-dark-yellow #FABD2F;
-   @define-color gruvbox-dark-blue #83A598;
-   @define-color gruvbox-dark-purple #D3869B;
-   @define-color gruvbox-dark-aqua #8EC07C;
-   @define-color gruvbox-dark-orange #FE8019;
-   @define-color gruvbox-dark-fg #EBDBB2;
-   @define-color gruvbox-dark-gray2 #A89984;
-
-/* Light */
-   @define-color gruvbox-light-bg #FBF1C7;
-   @define-color gruvbox-light-gray #928374;
-   @define-color gruvbox-light-red #9D0006;
-   @define-color gruvbox-light-green #79740E;
-   @define-color gruvbox-light-yellow #B57614;
-   @define-color gruvbox-light-blue #076678;
-   @define-color gruvbox-light-purple #8F3F71;
-   @define-color gruvbox-light-aqua #427B58;
-   @define-color gruvbox-light-orange #AF3A03;
-   @define-color gruvbox-light-fg #3C3836;
-   @define-color gruvbox-light-gray2 #7C6F64;
+$biscuit: (
+   dark: (
+      Licorice:       #1A1515,
+      RaisinBlack:    #2D2424,
+      VanDyke:        #453636,
+      Wenge:          #725A5A,
+      Cinereous:      #9C8181,
+      ChampagnePink:  #DCC9BC,
+      PapayaWhip:     #FFE9C7,
+      Crimson:        #CF223E,
+      BurntSienna:    #F07342,
+      PersianOrange:  #E39C45,
+      MossGreen:      #959A6B,
+      BattleshipGray: #768F80,
+      ChineseViolet:  #756D94,
+      UltraViolet:    #614F76,
+      Plum:           #7B3D79,
+      MagentaHaze:    #AE3F82
+   )
+);

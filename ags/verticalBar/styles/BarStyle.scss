@@ -3,8 +3,7 @@
 ##########################*/
 
 /*  Mocha */
-@import "./colorsheet.scss";
-/*$cornerRad: 10px;*/
+@import "./variables.scss";
 
 /*#########################
 ###      DEFAULTS       ###
@@ -16,9 +15,10 @@ highlight {
 }
 
 window.bar {
-    background-color: #191919;
+    background-color: $bar_bg;
     color: #fffeee; 
     box-shadow: -2px -2px 2px #2a2a2a;
+    border-right: 0px solid $bar_gg;
 }
 
 label {
@@ -35,7 +35,7 @@ button {
 ##########################*/
 
 .tabLabel{
-    background-color: #262626;
+    background-color: $bar_fg;
     padding: 5px 0px 5px 0px ;
     margin: 0px 5px 0px 5px;
     border-radius: 5px 5px 0px 0px ;
@@ -46,8 +46,8 @@ button {
     padding: 5px 0px 5px 0px ;
     margin: 0px 5px 0px 5px;
     border-radius: 0px 0px 5px 5px;
-    background-color: @accent;
-    box-shadow: inset 2px 2px 2px @shade;
+    background-color: $thir_col;
+    box-shadow: inset 2px 2px 2px transparent;
 }
 
 /*#########################
@@ -55,7 +55,7 @@ button {
 ##########################*/
 
 .workspaces{
-    background-color: #222222;
+    background-color: $bar_fg;
     padding: 0px 0px 0px 0px ;
     margin: 7px;
     border-radius: 5px;
@@ -63,13 +63,13 @@ button {
 
 .workspaces button.focused {
     padding: 0px;
-    background-color: @accent;
+    background-color: $main_col;
     border-radius: 5px;
     color: black;
-    box-shadow: inset 2px 2px 2px @shade;
-    /*border-left: 2px solid @accent;
+    box-shadow: inset 2px 2px 2px transparent;
+    /*border-left: 2px solid #555555;
     border-radius: 2px 0px 0px 2px;*/
-    /*box-shadow: inset 10px 0 6px -10px @accent;*/
+    /*box-shadow: inset 10px 0 6px -10px #555555;*/
 }
 
 .workspaces .focused, .occupied, .static{
@@ -81,7 +81,7 @@ button {
 .workspaceLB{
     margin-top: 10px;/**/
     padding: 05px 10px 05px 10px;
-    background-color: #2a2a2a;
+    background-color: $bar_fg;
     border-radius: 010px 010px 010px 010px;
     
 }
@@ -101,16 +101,16 @@ levelbar trough{
 }
 
 levelbar .empty{ 
-    background-color: #262626; 
+    background-color: $bar_gg; 
     border: 0px solid transparent;
 }
 
 levelbar .filled {
     margin: 1px;
     border: 0px solid transparent;
-    background-color: @accent;
-    -gtk-secondary-caret-color: @accent;
-    box-shadow: inset 2px 2px 2px 2px @shade;
+    background-color: $seco_col;
+    -gtk-secondary-caret-color: $main_col;
+    box-shadow: inset 2px 2px 2px 2px transparent;
 
 }
 
@@ -138,13 +138,16 @@ levelbar .filled {
 ##########################*/
 
 .Media{
-    padding: 10px;
-    /*background-color: #262626;
-    border-radius: 10px;*/
+    margin: 5px;
+    padding: 3px;
+    background-color: $bar_fg;
+    border-radius: 10px;
 }
+
 .MediaButton{
-    background-color: @accent;
-    border-radius: 5px;
-    box-shadow: inset 2px 2px 2px @shade;
+    padding: 1px 0px 1px 0px;
+    background-color: $bar_gg;
+    border-radius: 25px;
+    box-shadow: inset 2px 2px 2px transparent;
     border: 0px solid transparent;
 }

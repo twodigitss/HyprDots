@@ -2,10 +2,7 @@
 ###     C O L O R S     ###
 ##########################*/
 
-/*  Mocha */
-@import "../styles/colorsheet.scss";
-/*@define- cornerRad 10px;*/
-/*$corner-radius: 10px !default;*/
+@import "../styles/variables.scss";
 
 /*#########################
 ###      DEFAULTS       ###
@@ -31,7 +28,7 @@ button {
     animation-timing-function: ease-in;
     animation-name: slide-right;
     background-color: #1f1f1f;
-    border-right: 2px solid #444444;
+    border-right: 1px solid #444444;
 }
 
 /*#########################
@@ -52,7 +49,7 @@ button {
 .AppLauncherTypeInBox{
     border-radius: 5px;
     background-color: #262626;
-    border: 1px solid @accent;
+    border: 1px solid $thir_col;
 }
 
 /*#########################
@@ -83,6 +80,10 @@ button {
     border-radius: 7px;
 }
 
+.WHOAMI_PFP{
+    //border: 1px solid white;
+}
+
 .sessionBox{
     background-color: #262626;
     border-radius: 7px;
@@ -100,12 +101,12 @@ button {
     border-radius: 10px;
     font-size: 13px;
     font-style: normal;
-    -gtk-secondary-caret-color: @accent;
+    -gtk-secondary-caret-color: $main_col;
 }
 
 /*for some reason doesnt want to work*/
 .Calendar :focus{
-    -gtk-secondary-caret-color: @accent;
+    -gtk-secondary-caret-color: $main_col;
 }
 
 /*#########################
@@ -118,15 +119,16 @@ slider{
     border-color: transparent;
 }
 
-scale {
-    -gtk-secondary-caret-color: @accent;
-    border-color: @accent;    
-}
+//probably for inverted slider property
+// scale {
+//     -gtk-secondary-caret-color: $main_col;
+//     border-color: $main_col;    
+// }
 
 scale highlight{
-    -gtk-secondary-caret-color: @accent;
-    background-color: @accent;
-    border-color: @accent;    
+    -gtk-secondary-caret-color: $main_col;
+    background-color: $main_col;
+    border-color: $main_col;
 }
 
 .VolSliderBox{

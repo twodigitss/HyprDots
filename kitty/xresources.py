@@ -3,7 +3,7 @@ import re
 import os
 
 config = "/home/lewis/.config"
-scheme = "fuji.xresources"
+scheme = "nord.xresources"
 xresources_file = f"{config}/cfiles/xresources/{scheme}"
 colors_output_file = f"{config}/kitty/colorscheme.conf"
 

@@ -55,15 +55,23 @@ function VerticalBar(monitor = 0) {
     })
 }
 // CONFIGURATION
+
+// make sure sassc is installed on your system
+const thisDir = "/home/lewis/.config/ags/verticalBar"
+const scss = `${thisDir}/styles/BarStyle.scss`
+const css = `${thisDir}/styles/css/bar.css`
+Utils.exec(`sassc ${scss} ${css}`)
+
 App.config({
-    style: "./styles/BarStyle.scss",
+    style: css,
     windows: [
         VerticalBar(),
         controlPanel,
         NotificationPopups(),
     ],
     gtkTheme: "ArchLabs-Dark",
-    cursorTheme: "GoogleDot-White",
+    cursorTheme: "WhiteSur-cursors",
+    //cursorTheme: "GoogleDot-White",
 })
 
 export {}

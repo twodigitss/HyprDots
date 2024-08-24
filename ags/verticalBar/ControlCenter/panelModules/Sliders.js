@@ -35,7 +35,6 @@ export function Volslider(){
     return Widget.Box({
         /* unused class by the way */
         class_name: "VolSliderBox",
-        hpack: "left", 
         children: [getVolIcon(), mySlider],
     })
 }
