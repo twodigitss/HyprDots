@@ -22,6 +22,6 @@ export const myIdentity = Widget.CenterBox({
     class_name: "WHOAMI",
     start_widget: asd,
     center_widget: Widget.Label({
-        label: "Ross Lewis"
+        label: "Ludwig"
     }),
 })

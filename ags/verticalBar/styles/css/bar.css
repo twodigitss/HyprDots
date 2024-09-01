@@ -3,11 +3,15 @@
 ##########################*/
 /*  Mocha */
 /* DECLARACIONES GENERALES*/
-/*$main_col: map-get(map-get($nord, Aurora), green);
-$seco_col: map-get(map-get($mountainfuji, accents), kusa);
-$thir_col: map-get(map-get($gruvbox, dark), blue);
-*/
 /**/
+/*$main_col: map-get(map-get($nord, Aurora), purple);
+$seco_col: map-get(map-get($catpuccin, macchiato), Pink);
+$thir_col: map-get(map-get($mountainfuji, accents), sakura);
+*/
+/*$main_col: map-get(map-get($nord, Frost), sky);
+$seco_col: map-get(map-get($mountainfuji, accents), kori);
+$thir_col: map-get(map-get($catpuccin, macchiato), blue);
+*/
 /*#########################
 ###      DEFAULTS       ###
 ##########################*/
@@ -41,7 +45,7 @@ button {
   padding: 5px 0px 5px 0px;
   margin: 0px 5px 0px 5px;
   border-radius: 0px 0px 5px 5px;
-  background-color: #8aadf4;
+  background-color: #83A598;
   box-shadow: inset 2px 2px 2px transparent; }
 
 /*#########################
@@ -55,7 +59,7 @@ button {
 
 .workspaces button.focused {
   padding: 0px;
-  background-color: #88C0D0;
+  background-color: #A3BE8C;
   border-radius: 5px;
   color: black;
   box-shadow: inset 2px 2px 2px transparent;
@@ -93,8 +97,8 @@ levelbar .empty {
 levelbar .filled {
   margin: 1px;
   border: 0px solid transparent;
-  background-color: #A5B4CB;
-  -gtk-secondary-caret-color: #88C0D0;
+  background-color: #9EC49F;
+  -gtk-secondary-caret-color: #A3BE8C;
   box-shadow: inset 2px 2px 2px 2px transparent; }
 
 .BatteryBox {

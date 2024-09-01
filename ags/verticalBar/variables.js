@@ -1,4 +1,4 @@
-const config = "/home/lewis/.config"
+export const config = "/home/ludwig/.config"
 export const icons = {
     "user":    config + "/ags/Assets/profile.jpg",
     "exit":    config + "/ags/Assets/icons/Exit.png",

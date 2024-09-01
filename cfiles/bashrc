@@ -29,11 +29,12 @@ alias lusb='sudo fdisk -l'
 alias musb='sudo udisksctl mount -b '
 alias unmusb='sudo udisksctl unmount -b '
 #	----apps configuration----
+alias ff='fastfetch'
 alias nqtile='vim $HOME/.config/qtile/config.py'
 alias dw='cd $HOME/.suckless/dwm/ && sudo vim config.h'
 alias upddiscord='sudo vim /opt/discord/resources/build_info.json'
 #alias agsdebug='killall .ags-wrapped && ags -c $HOME/.config/ags/hbar/config.js'
-alias agsdebug='killall ags && ags -c $HOME/.config/ags/hbar/config.js'
+alias agsdebug='killall .ags-wrapped && ags -c $HOME/.config/ags/verticalBar/config.js'
 #	----system----
 alias rmd='rm -r'
 alias ta='tar -xf'
@@ -58,7 +59,7 @@ alias cdgb='cd $HOME/GithubRepo/bunnydelic && clear && ./source'
 alias gc='nix-collect-garbage -d'
 alias rb='sudo nixos-rebuild switch'
 alias gendir='cd /nix/var/nix/profiles/'
-alias gcn='sudo nix-collect-garbage --delete-older-than 14d'
+alias gcn='sudo nix-collect-garbage --delete-older-than 3d'
 alias gen='sudo nix-env --list-generations --profile /nix/var/nix/profiles/system'
 
 export LS_COLORS="\
@@ -100,12 +101,12 @@ undpur='\e[4;35m' # Purple
 undcyn='\e[4;36m' # Cyan
 undwht='\e[4;37m' # White
  
-bakblk='\e[0;37;40m'   # Black - Background
-bakred='\e[0;37;41m'   # Red
-bakgrn='\e[0;37;42m'   # Green
+bakblk='\e[0;00;40m'   # Black - Background
+bakred='\e[0;30;41m'   # Red
+bakgrn='\e[0;30;42m'   # Green
 bakylw='\e[0;30;43m'   # Yellow
-bakblu='\e[0;37;44m'   # Blue
-bakpur='\e[0;37;45m'   # Purple
+bakblu='\e[0;30;44m'   # Blue
+bakpur='\e[0;30;45m'   # Purple
 bakcyn='\e[0;30;46m'   # Cyan
 bakwht='\e[0;30;47m'   # White
  
@@ -114,7 +115,7 @@ end='\e[0m'    # Text Reset
 
 # Function to return color based on random number
 random_color() {
-    random_num=$(( RANDOM % 8 + 1 ))
+    random_num=$(( RANDOM % 7 + 1 ))
     case $random_num in
         3) echo -e $bakylw $txtylw;;
         4) echo -e $bakpur $txtpur;;
@@ -123,8 +124,6 @@ random_color() {
         6) echo -e $bakblu $txtblu;;
         7) echo -e $bakcyn $txtcyn;;
         2) echo -e $bakred $txtred;;
-        8) echo -e $bakblk $txtblk;;
-        *) echo -e $end $end;; # Default to no color
     esac
 }
 
@@ -133,7 +132,7 @@ bg=$(echo $colors | awk '{print $1}')
 fg=$(echo $colors | awk '{print $2}')
 
 # /--Prompt Customization-/
-PS1="$bakwht \v $end$bakblk \W $end > "
+PS1="$bg \v $end$bakblk \W $end > "
 #PS1="$bg \v $end \W > "
 
 cd() { builtin cd "$@" && ls; }

@@ -1,3 +1,4 @@
+import { config } from "../variables.js"
 import { SysTray } from "./panelModules/SysTray.js"
 import { calendar } from "./panelModules/Calendar.js"
 import { Volslider } from "./panelModules/Sliders.js"
@@ -72,7 +73,7 @@ export const controlPanel = Widget.Window({
 })
 
 // CONFIGURATION
-const thisDir = "/home/lewis/.config/ags/verticalBar"
+const thisDir = `${config}/ags/verticalBar`
 const scss = `${thisDir}/styles/ControlCenter.scss`
 const css = `${thisDir}/styles/css/controlcenter.css`
 Utils.exec(`sassc ${scss} ${css}`)

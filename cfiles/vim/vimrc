@@ -17,7 +17,7 @@ set termguicolors
 set background=dark
 
 "Sets colorscheme (found in colors folder)"
-colorscheme vscode
+colorscheme retrobox
 
 "==============================="
 

@@ -2,8 +2,8 @@
 import re
 import os
 
-config = "/home/lewis/.config"
-scheme = "nord.xresources"
+config = "/home/ludwig/.config"
+scheme = "gruvbox.xresources"
 xresources_file = f"{config}/cfiles/xresources/{scheme}"
 colors_output_file = f"{config}/kitty/colorscheme.conf"
 

@@ -2,11 +2,15 @@
 ###     C O L O R S     ###
 ##########################*/
 /* DECLARACIONES GENERALES*/
-/*$main_col: map-get(map-get($nord, Aurora), green);
-$seco_col: map-get(map-get($mountainfuji, accents), kusa);
-$thir_col: map-get(map-get($gruvbox, dark), blue);
-*/
 /**/
+/*$main_col: map-get(map-get($nord, Aurora), purple);
+$seco_col: map-get(map-get($catpuccin, macchiato), Pink);
+$thir_col: map-get(map-get($mountainfuji, accents), sakura);
+*/
+/*$main_col: map-get(map-get($nord, Frost), sky);
+$seco_col: map-get(map-get($mountainfuji, accents), kori);
+$thir_col: map-get(map-get($catpuccin, macchiato), blue);
+*/
 /*#########################
 ###      DEFAULTS       ###
 ##########################*/
@@ -50,7 +54,7 @@ button {
 .AppLauncherTypeInBox {
   border-radius: 5px;
   background-color: #262626;
-  border: 1px solid #8aadf4; }
+  border: 1px solid #83A598; }
 
 /*#########################
 ###       BUTTON        ###
@@ -90,11 +94,11 @@ button {
   border-radius: 10px;
   font-size: 13px;
   font-style: normal;
-  -gtk-secondary-caret-color: #88C0D0; }
+  -gtk-secondary-caret-color: #A3BE8C; }
 
 /*for some reason doesnt want to work*/
 .Calendar :focus {
-  -gtk-secondary-caret-color: #88C0D0; }
+  -gtk-secondary-caret-color: #A3BE8C; }
 
 /*#########################
 ###        SLIDER       ###
@@ -105,9 +109,9 @@ slider {
   border-color: transparent; }
 
 scale highlight {
-  -gtk-secondary-caret-color: #88C0D0;
-  background-color: #88C0D0;
-  border-color: #88C0D0; }
+  -gtk-secondary-caret-color: #A3BE8C;
+  background-color: #A3BE8C;
+  border-color: #A3BE8C; }
 
 .VolSliderBox {
   background-color: #262626;

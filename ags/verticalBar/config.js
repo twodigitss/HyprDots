@@ -6,7 +6,7 @@ import { verticalLevelBattery } from "./barModules/Battery.js"
 import { lortabs } from "./barModules/Lortabs.js"
 import { Dashboard } from "./barModules/Dashboard.js"
 import { Workspaces, WorkspacesLabel } from "./barModules/Workspaces.js"
-import { icons, comm } from "./variables.js"
+import { icons, comm, config } from "./variables.js"
 import { Media } from "./barModules/Media.js"
 
 // BASICALLY EVERY BOX FOR WIDGETS WERE THE SAME
@@ -57,7 +57,7 @@ function VerticalBar(monitor = 0) {
 // CONFIGURATION
 
 // make sure sassc is installed on your system
-const thisDir = "/home/lewis/.config/ags/verticalBar"
+const thisDir = `${config}/ags/verticalBar`
 const scss = `${thisDir}/styles/BarStyle.scss`
 const css = `${thisDir}/styles/css/bar.css`
 Utils.exec(`sassc ${scss} ${css}`)
@@ -70,7 +70,7 @@ App.config({
         NotificationPopups(),
     ],
     gtkTheme: "ArchLabs-Dark",
-    cursorTheme: "WhiteSur-cursors",
+    cursorTheme: "macOS-White",
     //cursorTheme: "GoogleDot-White",
 })
 
