@@ -1,0 +1,131 @@
+/*#########################
+###     C O L O R S     ###
+##########################*/
+
+@import "../styles/variables.scss";
+
+/*#########################
+###      DEFAULTS       ###
+##########################*/
+
+label {
+    font-weight: bold;
+}
+
+button {
+    background-color: transparent;
+    box-shadow: none;
+}
+
+.controlPanel{
+    /*idk if those two thing do work*/
+    animation-timing-function: ease-in;
+    background-color: #1f1f1f;
+    border-right: 1px solid #444444;
+    border-radius: 10px;
+}
+
+/*#########################
+###     APPLAUNCHER     ###
+##########################*/
+
+.appLauncher{
+    padding: 10px;
+    background-color: #262626;
+    border-radius: 7px;
+    /*border: 1px solid #444444;*/
+}
+
+.AppLauncherApptitle{
+    font-size: 13px;
+}
+
+.AppLauncherTypeInBox{
+    border-radius: 5px;
+    background-color: #262626;
+    border: 1px solid $thir_col;
+}
+
+/*#########################
+###       BUTTON        ###
+##########################*/
+
+.Dashboard_button{
+    /*background-color: #262626;
+    border-radius: 10px;*/
+    margin: 0px 4px 0px 4px;
+}
+
+.sessionButton{
+    background-color: #c8ccd6;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 2px 0px 2px 0px;
+}
+
+/*#########################
+###      USER BAGDE     ###
+##########################*/
+
+.WHOAMI{
+    background-color: #262626;
+    padding: 5px;
+    margin: 0px 0px 2px 0px;
+    border-radius: 7px;
+}
+
+.WHOAMI_PFP{
+    //border: 1px solid white;
+}
+
+.sessionBox{
+    background-color: #262626;
+    border-radius: 7px;
+    /*border: 1px solid #444444;*/
+}
+
+/*#########################
+###       CALENDAR      ###
+##########################*/
+
+.Calendar{
+    background-color: #2a2a2a;
+    border: none;
+    box-shadow: none;
+    border-radius: 10px;
+    font-size: 13px;
+    font-style: normal;
+    -gtk-secondary-caret-color: $main_col;
+}
+
+/*for some reason doesnt want to work*/
+.Calendar :focus{
+    -gtk-secondary-caret-color: $main_col;
+}
+
+/*#########################
+###        SLIDER       ###
+##########################*/
+
+/*me voy a matar puto slider del orto*/
+slider{
+    background-color: #4a4a4a;
+    border-color: transparent;
+}
+
+//probably for inverted slider property
+// scale {
+//     -gtk-secondary-caret-color: $main_col;
+//     border-color: $main_col;    
+// }
+
+scale highlight{
+    -gtk-secondary-caret-color: $seco_col;
+    background-color: $seco_col;
+    border-color: $seco_col;
+}
+
+.VolSliderBox{
+    background-color: #262626;
+    border-radius: 7px;
+}

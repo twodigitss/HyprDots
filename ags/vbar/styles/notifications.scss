@@ -1,0 +1,65 @@
+/*#########################
+###     NOTIF POPUP     ###
+##########################*/
+
+window.notification-popups box.notifications {
+    padding: .5em;
+}
+
+.icon {
+    min-width: 8px;
+    min-height: 8px;
+    margin: 0em 1em 0em 1em;
+}
+
+.icon image {
+    font-size: 48px;
+    /* to center the icon */
+    margin: 5px;
+    color: @theme_fg_color;
+}
+
+.icon box {
+    min-width: 68px;
+    min-height: 68px;
+    border-radius: 7px;
+}
+
+.notification {
+    min-width: 300px;
+    border-radius: 8px;
+    padding: 1em;
+    margin: .5em;
+    border: 0px solid @wm_borders_edge;
+    background-color: #191919;
+    box-shadow: 2px 2px 2px #2a2a2a;
+}
+
+.notification.critical {
+    border: 1px solid lightcoral;
+}
+
+.title {
+    color: @theme_focused_fg_color;
+    font-size: 1em;
+    margin: 5px 0px 9px 0px;
+}
+
+.body {
+    color: @theme_unfocused_fg_color;
+    font-size: 0.9em;
+    margin-bottom: 9px;
+}
+
+.actions .action-button {
+    margin: 0 .4em;
+    margin-top: .9em;
+}
+
+.actions .action-button:first-child {
+    margin-left: 0;
+}
+
+.actions .action-button:last-child {
+    margin-right: 0;
+}

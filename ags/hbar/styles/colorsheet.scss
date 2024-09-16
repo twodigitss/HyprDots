@@ -1,0 +1,137 @@
+// ONE DARK COLORSCHEME
+$onedark: (
+   dark:   #282c34,
+   red:    #e06c75,
+   green:  #98c379,
+   yellow: #e5c07b,
+   blue:   #61afef,
+   purple: #c678dd,
+   teal:   #56b6c2,
+   grey:   #abb2bf
+);
+
+//NORD COLORSCHEME
+$nord: (  
+   Frost: (
+      aqua:   #8FBCBB,
+      sky:    #88C0D0,
+      blue:   #81A1C1,
+      marine: #5E81AC
+   ),
+   Aurora: (
+      red:    #FB616A,
+      orange: #D08770,
+      yellow: #EBCB8B,
+      green:  #A3BE8C,
+      purple: #B48EAD
+   )
+);
+
+//MOUNTAIN FUJI COLORSCHEME
+$mountainfuji: (
+   alphas: (
+      ume:     #8F8AAC,
+      kosumosu:#AC8AAC,
+      chikyu:  #ACA98A,
+      kaen:    #AC8A8C,
+      aki:     #C6A679,
+      mizu:    #8AACAB,
+      take:    #8AAC8B,
+      shinkai: #8A98AC,
+      iwa:     #262626,
+      usagi:   #E7E7E7
+   ),
+   accents: (
+      ajisai:   #A39EC4,
+      sakura:   #C49EC4,
+      suna:     #C4C19E,
+      ichigo:   #C49EA0,
+      yuyake:   #CEB188,
+      sora:     #9EC3C4,
+      kusa:     #9EC49F,
+      kori:     #A5B4CB,
+      amagumo:  #4C4C4C,
+      yukiFG:   #F0F0F0
+   )
+);
+
+
+// CATPUCCIN MACCHIATO
+$catpuccin: (
+   macchiato: (
+      Rosewater: #f4dbd6,
+      Flamingo:  #f0c6c6,
+      Pink:      #f5bde6,
+      Mauve:     #c6a0f6,
+      Red:       #ed8796,
+      Maroon:    #ee99a0,
+      Peach:     #f5a97f,
+      Yellow:    #eed49f,
+      Green:     #a6da95,
+      Teal:      #8bd5ca,
+      Sky:       #91d7e3,
+      Sapphire:  #7dc4e4,
+      Blue:      #8aadf4,
+      Lavender:  #b7bdf8
+   )
+);
+
+// GRUVBOX COLORSCHEME
+$gruvbox: (
+   base: (
+      red:      #CC241D,
+      green:    #98971A,
+      yellow:   #D79921,
+      blue:     #458588,
+      purple:   #B16286,
+      aqua:     #689D6A,
+      orange:   #D65D0E
+   ),
+   dark: (
+      bg:       #282828,
+      gray:     #928374,
+      red:      #FB4934,
+      green:    #B8BB26,
+      yellow:   #FABD2F,
+      blue:     #83A598,
+      purple:   #D3869B,
+      aqua:     #8EC07C,
+      orange:   #FE8019,
+      fg:       #EBDBB2,
+      gray2:    #A89984
+   ),
+   light: (
+      bg:       #FBF1C7,
+      gray:     #928374,
+      red:      #9D0006,
+      green:    #79740E,
+      yellow:   #B57614,
+      blue:     #076678,
+      purple:   #8F3F71,
+      aqua:     #427B58,
+      orange:   #AF3A03,
+      fg:       #3C3836,
+      gray2:    #7C6F64
+   )
+);
+
+$biscuit: (
+   dark: (
+      Licorice:       #1A1515,
+      RaisinBlack:    #2D2424,
+      VanDyke:        #453636,
+      Wenge:          #725A5A,
+      Cinereous:      #9C8181,
+      ChampagnePink:  #DCC9BC,
+      PapayaWhip:     #FFE9C7,
+      Crimson:        #CF223E,
+      BurntSienna:    #F07342,
+      PersianOrange:  #E39C45,
+      MossGreen:      #959A6B,
+      BattleshipGray: #768F80,
+      ChineseViolet:  #756D94,
+      UltraViolet:    #614F76,
+      Plum:           #7B3D79,
+      MagentaHaze:    #AE3F82
+   )
+);

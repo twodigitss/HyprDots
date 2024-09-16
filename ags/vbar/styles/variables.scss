@@ -1,0 +1,43 @@
+/* DECLARACIONES GENERALES*/
+@import "./colorsheet.scss";
+
+//basic three black colors
+$bar_bg: #191919;
+$bar_fg: #252525;
+$bar_gg: #2d2d2d;
+
+//Gruvbox - Green Colorscheme
+$main_col: map-get(map-get($nord, Aurora), green);
+$seco_col: map-get(map-get($mountainfuji, accents), kusa);
+$thir_col: map-get(map-get($gruvbox, dark), blue);
+/**/
+
+//Purple colorscheme
+/*$main_col: map-get(map-get($nord, Aurora), purple);
+$seco_col: map-get(map-get($catpuccin, macchiato), Pink);
+$thir_col: map-get(map-get($mountainfuji, accents), sakura);
+*/
+
+// Blue colorscheme
+/*$main_col: map-get(map-get($nord, Frost), sky);
+$seco_col: map-get(map-get($mountainfuji, accents), kori);
+$thir_col: map-get(map-get($catpuccin, macchiato), blue);
+*/
+
+// Peach Theme
+/*$main_col: map-get(map-get($catpuccin, macchiato), Flamingo);
+$seco_col: map-get(map-get($catpuccin, macchiato), Rosewater);
+$thir_col: map-get(map-get($biscuit, dark), ChampagnePink);
+*/
+
+//white... as you can see
+/*$main_col: #c8ccd6;
+$seco_col: $main_col;
+$thir_col: $main_col;
+*/
+
+// Blue colorscheme
+/*$main_col: map-get(map-get($nord, Frost), sky);
+$seco_col: map-get(map-get($mountainfuji, accents), sakura);
+$thir_col: map-get(map-get($catpuccin, macchiato), blue);
+*/

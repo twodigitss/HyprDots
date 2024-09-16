@@ -1,0 +1,127 @@
+/*#########################
+###     C O L O R S     ###
+##########################*/
+/*  Mocha */
+/* DECLARACIONES GENERALES*/
+/*$main_col: map-get(map-get($nord, Aurora), green);
+$seco_col: map-get(map-get($mountainfuji, accents), kusa);
+$thir_col: map-get(map-get($gruvbox, dark), blue);
+*/
+/*$main_col: map-get(map-get($nord, Aurora), purple);
+$seco_col: map-get(map-get($catpuccin, macchiato), Pink);
+$thir_col: map-get(map-get($mountainfuji, accents), sakura);
+*/
+/*$main_col: map-get(map-get($nord, Frost), sky);
+$seco_col: map-get(map-get($mountainfuji, accents), kori);
+$thir_col: map-get(map-get($catpuccin, macchiato), blue);
+*/
+/**/
+/*#########################
+###      DEFAULTS       ###
+##########################*/
+separator {
+  background-color: transparent; }
+
+levelbar block,
+highlight {
+  min-height: 10px; }
+
+window.bar {
+  background-color: #191919;
+  color: #fffeee;
+  box-shadow: -2px -2px 2px #2a2a2a;
+  border-right: 0px solid #2d2d2d; }
+
+label {
+  font-weight: bold; }
+
+button {
+  background-color: transparent;
+  box-shadow: none; }
+
+/*#########################
+###     TAB WIDGETS     ###
+##########################*/
+.tabLabel {
+  margin: 5px 0px 5px 0px;
+  border-radius: 5px 0px 0px 5px; }
+
+.tabIcon {
+  margin: 5px 0px 5px 0px;
+  border-radius: 0px 5px 5px 0px;
+  box-shadow: inset 2px 2px 2px transparent; }
+
+/*#########################
+###      WORKSPACES     ###
+##########################*/
+.workspaces {
+  background-color: #252525;
+  padding: 0px 0px 0px 0px;
+  border-radius: 5px; }
+
+.workspaces button.focused {
+  padding: 0px;
+  background-color: #f0c6c6;
+  border-radius: 5px;
+  color: black;
+  box-shadow: inset 2px 2px 2px transparent;
+  /*border-left: 2px solid #555555;
+    border-radius: 2px 0px 0px 2px;*/
+  /*box-shadow: inset 10px 0 6px -10px #555555;*/ }
+
+.workspaces .focused, .occupied, .static {
+  border: 0px solid transparent;
+  background-color: transparent;
+  /*box-shadow: inset 2px 4px 8px #121212;*/ }
+
+.workspaceLB {
+  padding: 03px 10px 03px 10px;
+  border-radius: 010px 010px 010px 010px; }
+
+/*#########################
+###      BATTERIES      ###
+##########################*/
+levelbar block {
+  background-color: transparent;
+  border-radius: 5px; }
+
+levelbar trough {
+  background-color: transparent;
+  border-color: transparent; }
+
+levelbar .empty {
+  background-color: #2d2d2d;
+  border: 0px solid transparent; }
+
+levelbar .filled {
+  margin: 1px;
+  border: 0px solid transparent;
+  background-color: #f4dbd6;
+  -gtk-secondary-caret-color: #f0c6c6;
+  box-shadow: inset 2px 2px 2px 2px transparent; }
+
+.BatteryBox .verticalBatteryIcon {
+  margin-right: 7px; }
+
+/*UNUSED*/
+.circularBattery {
+  min-width: 32px;
+  min-height: 32px;
+  font-size: 6px;
+  margin: 0px;
+  background-color: #131313;
+  color: #f0ead6; }
+
+/*#########################
+###        MEDIAP       ###
+##########################*/
+.Media {
+  margin: 5px;
+  padding: 3px 5px 3px 5px;
+  border-radius: 10px; }
+
+.MediaButton {
+  padding: 0px 3px 0px 3px;
+  border-radius: 50px;
+  box-shadow: inset 2px 2px 2px transparent;
+  border: 0px solid transparent; }
