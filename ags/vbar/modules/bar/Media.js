@@ -50,6 +50,5 @@ export function Media() {
         spacing: 5,
         vertical: true,
         children: [prev, play, next],
-        //Widget.Label({ label }),
     })
 }

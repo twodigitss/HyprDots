@@ -13,7 +13,7 @@ export function WorkspacesLabel() {
       self.hook(
         hyprland, () => {
           let wsid = hyprland.active.workspace.name
-          self.label = `Workspace ${wsid}`
+          self.label = wsid
         }
       );
     }
@@ -54,3 +54,37 @@ export function Workspaces(){
 }
 
 
+export function WorkspacesInd(){
+  const workspaces = ["", "", "", ""];
+  //const workspaces = ["1","2","3","4"];
+  return Widget.Box({
+    class_name: 'workspacesInd',
+    homogeneous: false,
+    vertical: true,
+    hpack: "center",
+    spacing: 10,
+    children: workspaces.map((label, index) => {
+      const wsId = index + 1;
+      const updateClassName = (self) => {
+        if (hyprland.active.workspace.id === wsId) {
+          self.heightRequest = 30, 
+          self.class_name = "focused";
+        } 
+        else {
+          self.heightRequest = 5, 
+          self.class_name = hyprland.workspaces.some(
+            ws => ws.id === wsId && ws.windows !== 0
+            ) ? "occupied" : "static";
+        }
+      };
+      return Widget.Button({
+        attribute: `${wsId}`,
+        label: label,
+        on_clicked: () => { hyprland.messageAsync(`dispatch workspace ${wsId}`); },
+        setup: self => {
+          self.hook(hyprland, () => updateClassName(self));
+        }
+      });
+    })
+  });
+}

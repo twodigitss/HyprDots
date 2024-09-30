@@ -29,9 +29,9 @@ export function verticalLevelBattery() {
                 class_name: "verticalBattery" ,
                 inverted: false,
                 vertical: true,
-                widthRequest: 10,
-                heightRequest: 75,
-                vpack: "center",
+                widthRequest: 20,
+                heightRequest: 50,
+                hpack: "center",
                 value,
             }),
             

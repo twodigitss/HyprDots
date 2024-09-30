@@ -22,3 +22,18 @@ export function lortabs( myIcon, myLabel ){
 }
 
 
+export function lortabsNoIcon( myLabel ){
+    return Widget.Box({
+        vertical: true,
+        spacing: 0,
+        vpack: "center",
+        children:[
+            Widget.Label({
+                justification: "center",
+                class_name: "tabLabel",
+                label: myLabel.bind()
+            }),
+        ]
+    })
+
+}

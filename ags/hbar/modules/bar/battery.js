@@ -12,24 +12,24 @@ export const circularBattery = Widget.CircularProgress({
 })
 
 export function Battery() {
+    var levelxd = ""
     const value = battery.bind("percent").as(p => p > 0 ? p / 100 : 0)
     let icon = battery.bind("percent").as(p =>
             `battery-level-${Math.floor(p / 10) * 10}-symbolic`)
-
     return Widget.Box({
         class_name: "BatteryBox",
         visible: battery.bind("available"),
         children: [
-            Widget.Icon({ 
+            /*Widget.Icon({ 
                 class_name: "verticalBatteryIcon",
                 icon: icon, 
-            }),
+            }),*/
             Widget.Label({label: value}),
             Widget.LevelBar({
                 class_name: "verticalBattery" ,
-                inverted: false,
-                heightRequest: 20,
-                widthRequest: 50,
+                inverted: true,
+                heightRequest: 22,
+                widthRequest: 75,
                 vpack: "center",
                 value,
             }),

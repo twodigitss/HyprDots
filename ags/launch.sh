@@ -14,10 +14,10 @@ start_command="ags -c $HOME/.config/ags/$bar/config.js &"
 #Verifies if te process is stil running in background
 if pgrep -x "$process_name" > /dev/null; then
     #Tries to kill it and restart it with the new process
-    if killall "$process_name"; then
+    if pkill "$process_name"; then
         $start_command
     else
-        echo "$process_name cannot be killed, do something..."
+        echo "$process_name cannot be killed, do something else..."
         exit 1
     fi
 else

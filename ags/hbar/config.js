@@ -1,15 +1,15 @@
 const hyprland = await Service.import("hyprland")
 import { NotificationPopups } from "./notificationPopups.js"
 import { controlPanel } from "./panel.js"
+//import { config } from "../variables.json" 
 
-import { icons, comm, config } from "./variables.js"
-
+import { comm, config } from "./variables.js"
 import { Battery } from "./modules/bar/battery.js"
-import { td, tdNoIcon } from "./modules/bar/datetime.js"
+import { tdNoIcon } from "./modules/bar/datetime.js"
 import { Dashboard } from "./modules/bar/Dashboard.js"
 import { Media } from "./modules/bar/Media.js"
-import { SysTray } from "./modules/bar/SysTray.js"
-import { myIdentity } from "./modules/bar/UserBadge.js"
+import { SysTray } from "./modules/bar/SysTray.js" 
+import { vol, bri } from "./modules/bar/vol_bri_bar.js"
 
 
 // BASICALLY EVERY BOX FOR WIDGETS WERE THE SAME
@@ -34,22 +34,19 @@ function ClientTitle() {
 
 // IMPORTED WIDGETS
 const start  = [ 
-    Widget.Separator({widthRequest: 5}),
-    //myIdentity,
+    Widget.Separator({widthRequest: 15}),
+    Media(),
     Dashboard(),
     ClientTitle(),
-    //WorkspacesLabel(),
 ]
 const center = [  
-    
+        //vol, bri
 ]
 const bottom = [
-    SysTray({orientation: "right"}),
-    Widget.Separator({widthRequest: 5}),
     Battery(),
     tdNoIcon(comm["date"]),
     tdNoIcon(comm["time"]),
-    Widget.Separator({widthRequest: 5}),
+    Widget.Separator({widthRequest: 15}),
 ]
 
 //MAIN BAR :>
@@ -59,12 +56,12 @@ function StatusBar() {
         class_name: "bar",
         monitor: 0,
         //margins:[5],
-        anchor: ["top", "left", "right"],
+        anchor: ["bottom", "left", "right"],
         exclusivity: "exclusive",
         child: Widget.CenterBox({
-            start_widget: wibox( start , "start" ),
+            start_widget: wibox( start , "start", 0 ),
             center_widget: wibox( center , "center" ),
-            end_widget: wibox( bottom , "end", 15 ),
+            end_widget: wibox( bottom , "end" ),
         }),
     })
 }
@@ -84,7 +81,8 @@ App.config({
         controlPanel,
     ],
     gtkTheme: "ArchLabs-Dark",
-    cursorTheme: "macOS-Monterey-White",
+    //cursorTheme: "macOS-Monterey-White",
+    cursorTheme: "macOS-BigSur-White",
     //cursorTheme: "GoogleDot-White",
 })
 

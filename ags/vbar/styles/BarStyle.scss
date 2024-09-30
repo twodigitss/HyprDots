@@ -17,8 +17,10 @@ highlight {
 window.bar {
     background-color: $bar_bg;
     color: #fffeee; 
-    box-shadow: -2px -2px 2px #2a2a2a;
-    border-right: 0px solid $bar_gg;
+    font-size: 13px;
+    box-shadow: -2px -2px 2px transparent;
+    border: 0px solid transparent;
+    //border-radius: 10px;
 }
 
 label {
@@ -39,14 +41,16 @@ button {
     padding: 5px 0px 5px 0px ;
     margin: 0px 5px 0px 5px;
     border-radius: 5px 5px 0px 0px ;
+    //border-radius: 5px 5px 0px 0px ;
 
 }
 
 .tabIcon{
-    background-color: $thir_col;
+    background-color: $main_col;
     padding: 5px 0px 5px 0px ;
     margin: 0px 5px 0px 5px;
     border-radius: 0px 0px 5px 5px;
+    //border-radius: 0px 0px 5px 5px;
     box-shadow: inset 2px 2px 2px transparent;
 }
 
@@ -83,9 +87,25 @@ button {
     padding: 05px 10px 05px 10px;
     background-color: $bar_fg;
     border-radius: 010px 010px 010px 010px;
-    
 }
 
+.workspacesInd button{
+    padding: 0px;
+    color: black;
+    border-radius: 5px;
+    //margin: 0px 10px 0px 10px;
+}
+    
+.workspacesInd button.focused{
+    background-color: $main_col;
+}
+.workspacesInd button.static{
+    background-color: #232323;
+}
+
+.workspacesInd button.occupied{
+    background-color: #323232;
+}
 /*#########################
 ###      BATTERIES      ###
 ##########################*/

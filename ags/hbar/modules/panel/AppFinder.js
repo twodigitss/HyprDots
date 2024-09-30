@@ -6,10 +6,10 @@ const AppItem = app => Widget.Button({
     attribute: { app },
     child: Widget.Box({
         children: [
-            Widget.Icon({
+            /*Widget.Icon({
                 icon: app.icon_name || " ",
                 size: 20,
-            }),
+            }),*/
             Widget.Label({
                 class_name: "AppLauncherApptitle",
                 label: "  " + app.name,
@@ -30,7 +30,7 @@ let applications = query("").map(AppItem)
 
 // container holding the buttons
 const list = Widget.Box({
-    vertical: true, children: applications, spacing: 10,
+    vertical: true, children: applications, spacing: 5,
 })
 
 // repopulate the box, so the most frequent apps are on top of the list
@@ -43,7 +43,7 @@ function repopulate() {
 const entry = Widget.Entry({
     class_name: "AppLauncherTypeInBox",
     hexpand: true,
-    css: `margin-bottom: 13px;`,
+    css: `margin-bottom: 5px;`,
 
     // to launch the first item on Enter
     on_accept: () => {

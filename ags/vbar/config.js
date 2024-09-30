@@ -3,9 +3,9 @@ import { controlPanel } from "./panel.js"
 import { NotificationPopups } from "./notificationPopups.js"
 
 import { verticalLevelBattery } from "./modules/bar/Battery.js"
-import { lortabs } from "./modules/bar/Lortabs.js"
+import { lortabs, lortabsNoIcon } from "./modules/bar/Lortabs.js"
 import { Dashboard } from "./modules/bar/Dashboard.js"
-import { Workspaces, WorkspacesLabel } from "./modules/bar/Workspaces.js"
+import { Workspaces, WorkspacesLabel, WorkspacesInd } from "./modules/bar/Workspaces.js"
 import { icons, comm, config } from "./variables.js"
 import { Media } from "./modules/bar/Media.js"
 
@@ -22,17 +22,18 @@ function wibox( widget_list, position, space=10 ){
 // IMPORTED WIDGETS
 const start  = [ 
     Widget.Separator({vertical: true}),
-    Workspaces(),
+    //WorkspacesLabel(),
+    //Media(),
     verticalLevelBattery(),
     
 ]
 const center = [  
-    Media(),
+    WorkspacesInd(),
+    Dashboard(),
 ]
 const bottom = [
-    lortabs(icons["time"], comm["time"]), 
-    lortabs(icons["date"], comm["date"]), 
-    Dashboard(),
+    lortabs(icons["time"],comm["time"]), 
+    lortabs(icons["date"],comm["date"]), 
     Widget.Separator({vertical: true}),
     
 ]
@@ -43,11 +44,12 @@ function VerticalBar() {
         name: 'bar-${monitor}',
         class_name: "bar",
         monitor: 0,
+        //margins: [4,0,4,4,],
         anchor: ["left", "top", "bottom"],
         exclusivity: "exclusive",
         child: Widget.CenterBox({
             vertical: true,
-            start_widget: wibox( start , "start", 5),
+            start_widget: wibox( start , "start" , 15 ),
             center_widget: wibox( center , "center" ),
             end_widget: wibox( bottom , "end" ),
         }),
@@ -69,7 +71,7 @@ App.config({
         NotificationPopups(),
     ],
     gtkTheme: "ArchLabs-Dark",
-    cursorTheme: "macOS-White",
+    cursorTheme: "macOS-Monterey-White",
     //cursorTheme: "GoogleDot-White",
 })
 

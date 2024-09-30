@@ -47,7 +47,6 @@ export function Media() {
     return Widget.Box({
         class_name: "Media",
         vpack:"center",
-        hpack:"center",
         homogeneous: true,
         spacing: 5,
         children: [prev, play, next],

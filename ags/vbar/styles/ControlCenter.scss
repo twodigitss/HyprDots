@@ -15,14 +15,19 @@ label {
 button {
     background-color: transparent;
     box-shadow: none;
+    &:not(.Dashboard_button) {
+      background: transparent; // This is optional since the rule above already applies to all buttons
+    }
 }
 
 .controlPanel{
     /*idk if those two thing do work*/
     animation-timing-function: ease-in;
+    transition: width 2.8s ease, transform 2.2s ease-in-out;
     background-color: #1f1f1f;
-    border-right: 1px solid #444444;
+    //border-right: 1px solid #444444;
     border-radius: 10px;
+    font-size: 12px;
 }
 
 /*#########################
@@ -37,23 +42,22 @@ button {
 }
 
 .AppLauncherApptitle{
-    font-size: 13px;
+    //font-size: 13px;
 }
 
 .AppLauncherTypeInBox{
     border-radius: 5px;
     background-color: #262626;
-    border: 1px solid $thir_col;
+    border: 1px solid $seco_col;
 }
 
 /*#########################
 ###       BUTTON        ###
 ##########################*/
 
-.Dashboard_button{
-    /*background-color: #262626;
-    border-radius: 10px;*/
-    margin: 0px 4px 0px 4px;
+button.Dashboard_button{
+    margin: 0px 0px 0px 0px;
+    background-color: $bar_gg;
 }
 
 .sessionButton{
@@ -93,7 +97,7 @@ button {
     border: none;
     box-shadow: none;
     border-radius: 10px;
-    font-size: 13px;
+    //font-size: 13px;
     font-style: normal;
     -gtk-secondary-caret-color: $main_col;
 }

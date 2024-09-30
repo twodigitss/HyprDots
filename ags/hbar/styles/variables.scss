@@ -13,19 +13,25 @@ $thir_col: map-get(map-get($gruvbox, dark), blue);
 */
 
 //Purple colorscheme
-/*$main_col: map-get(map-get($nord, Aurora), purple);
+/*$main_col: map-get(map-get($catpuccin, macchiato), Pink);
 $seco_col: map-get(map-get($catpuccin, macchiato), Pink);
-$thir_col: map-get(map-get($mountainfuji, accents), sakura);
+$thir_col: map-get(map-get($catpuccin, macchiato), Pink);
 */
 
 // Blue colorscheme
-/*$main_col: map-get(map-get($nord, Frost), sky);
+$main_col: map-get(map-get($nord, Frost), sky);
 $seco_col: map-get(map-get($mountainfuji, accents), kori);
 $thir_col: map-get(map-get($catpuccin, macchiato), blue);
+/**/
+
+//Orange colorscheme
+/*$main_col : map-get(map-get($catpuccin, macchiato), Peach);
+$seco_col : $main_col;
+$thir_col : map-get(map-get($mountainfuji, accents), yuyake);
 */
 
 // Peach Theme
-$main_col: map-get(map-get($catpuccin, macchiato), Flamingo);
+/*$main_col: map-get(map-get($catpuccin, macchiato), Flamingo);
 $seco_col: map-get(map-get($catpuccin, macchiato), Rosewater);
 $thir_col: map-get(map-get($biscuit, dark), ChampagnePink);
-/**/
+*/

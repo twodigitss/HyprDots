@@ -3,7 +3,10 @@
 ##########################*/
 /*  Mocha */
 /* DECLARACIONES GENERALES*/
-/**/
+/*$main_col: map-get(map-get($nord, Aurora), green);
+$seco_col: map-get(map-get($mountainfuji, accents), kusa);
+$thir_col: map-get(map-get($gruvbox, dark), blue);
+*/
 /*$main_col: map-get(map-get($nord, Aurora), purple);
 $seco_col: map-get(map-get($catpuccin, macchiato), Pink);
 $thir_col: map-get(map-get($mountainfuji, accents), sakura);
@@ -16,14 +19,7 @@ $thir_col: map-get(map-get($catpuccin, macchiato), blue);
 $seco_col: map-get(map-get($catpuccin, macchiato), Rosewater);
 $thir_col: map-get(map-get($biscuit, dark), ChampagnePink);
 */
-/*$main_col: #c8ccd6;
-$seco_col: $main_col;
-$thir_col: $main_col;
-*/
-/*$main_col: map-get(map-get($nord, Frost), sky);
-$seco_col: map-get(map-get($mountainfuji, accents), sakura);
-$thir_col: map-get(map-get($catpuccin, macchiato), blue);
-*/
+/**/
 /*#########################
 ###      DEFAULTS       ###
 ##########################*/
@@ -34,8 +30,9 @@ highlight {
 window.bar {
   background-color: #191919;
   color: #fffeee;
-  box-shadow: -2px -2px 2px #2a2a2a;
-  border-right: 0px solid #2d2d2d; }
+  font-size: 13px;
+  box-shadow: -2px -2px 2px transparent;
+  border: 0px solid transparent; }
 
 label {
   font-weight: bold; }
@@ -54,7 +51,7 @@ button {
   border-radius: 5px 5px 0px 0px; }
 
 .tabIcon {
-  background-color: #83A598;
+  background-color: #c8ccd6;
   padding: 5px 0px 5px 0px;
   margin: 0px 5px 0px 5px;
   border-radius: 0px 0px 5px 5px;
@@ -71,7 +68,7 @@ button {
 
 .workspaces button.focused {
   padding: 0px;
-  background-color: #A3BE8C;
+  background-color: #c8ccd6;
   border-radius: 5px;
   color: black;
   box-shadow: inset 2px 2px 2px transparent;
@@ -91,6 +88,20 @@ button {
   background-color: #252525;
   border-radius: 010px 010px 010px 010px; }
 
+.workspacesInd button {
+  padding: 0px;
+  color: black;
+  border-radius: 5px; }
+
+.workspacesInd button.focused {
+  background-color: #c8ccd6; }
+
+.workspacesInd button.static {
+  background-color: #232323; }
+
+.workspacesInd button.occupied {
+  background-color: #323232; }
+
 /*#########################
 ###      BATTERIES      ###
 ##########################*/
@@ -109,8 +120,8 @@ levelbar .empty {
 levelbar .filled {
   margin: 1px;
   border: 0px solid transparent;
-  background-color: #9EC49F;
-  -gtk-secondary-caret-color: #A3BE8C;
+  background-color: #c8ccd6;
+  -gtk-secondary-caret-color: #c8ccd6;
   box-shadow: inset 2px 2px 2px 2px transparent; }
 
 .BatteryBox {

@@ -2,7 +2,10 @@
 ###     C O L O R S     ###
 ##########################*/
 /* DECLARACIONES GENERALES*/
-/**/
+/*$main_col: map-get(map-get($nord, Aurora), green);
+$seco_col: map-get(map-get($mountainfuji, accents), kusa);
+$thir_col: map-get(map-get($gruvbox, dark), blue);
+*/
 /*$main_col: map-get(map-get($nord, Aurora), purple);
 $seco_col: map-get(map-get($catpuccin, macchiato), Pink);
 $thir_col: map-get(map-get($mountainfuji, accents), sakura);
@@ -15,14 +18,7 @@ $thir_col: map-get(map-get($catpuccin, macchiato), blue);
 $seco_col: map-get(map-get($catpuccin, macchiato), Rosewater);
 $thir_col: map-get(map-get($biscuit, dark), ChampagnePink);
 */
-/*$main_col: #c8ccd6;
-$seco_col: $main_col;
-$thir_col: $main_col;
-*/
-/*$main_col: map-get(map-get($nord, Frost), sky);
-$seco_col: map-get(map-get($mountainfuji, accents), sakura);
-$thir_col: map-get(map-get($catpuccin, macchiato), blue);
-*/
+/**/
 /*#########################
 ###      DEFAULTS       ###
 ##########################*/
@@ -32,13 +28,16 @@ label {
 button {
   background-color: transparent;
   box-shadow: none; }
+  button:not(.Dashboard_button) {
+    background: transparent; }
 
 .controlPanel {
   /*idk if those two thing do work*/
   animation-timing-function: ease-in;
+  transition: width 2.8s ease, transform 2.2s ease-in-out;
   background-color: #1f1f1f;
-  border-right: 1px solid #444444;
-  border-radius: 10px; }
+  border-radius: 10px;
+  font-size: 12px; }
 
 /*#########################
 ###     APPLAUNCHER     ###
@@ -49,21 +48,17 @@ button {
   border-radius: 7px;
   /*border: 1px solid #444444;*/ }
 
-.AppLauncherApptitle {
-  font-size: 13px; }
-
 .AppLauncherTypeInBox {
   border-radius: 5px;
   background-color: #262626;
-  border: 1px solid #83A598; }
+  border: 1px solid #c8ccd6; }
 
 /*#########################
 ###       BUTTON        ###
 ##########################*/
-.Dashboard_button {
-  /*background-color: #262626;
-    border-radius: 10px;*/
-  margin: 0px 4px 0px 4px; }
+button.Dashboard_button {
+  margin: 0px 0px 0px 0px;
+  background-color: #2d2d2d; }
 
 .sessionButton {
   background-color: #c8ccd6;
@@ -93,13 +88,12 @@ button {
   border: none;
   box-shadow: none;
   border-radius: 10px;
-  font-size: 13px;
   font-style: normal;
-  -gtk-secondary-caret-color: #A3BE8C; }
+  -gtk-secondary-caret-color: #c8ccd6; }
 
 /*for some reason doesnt want to work*/
 .Calendar :focus {
-  -gtk-secondary-caret-color: #A3BE8C; }
+  -gtk-secondary-caret-color: #c8ccd6; }
 
 /*#########################
 ###        SLIDER       ###
@@ -110,9 +104,9 @@ slider {
   border-color: transparent; }
 
 scale highlight {
-  -gtk-secondary-caret-color: #9EC49F;
-  background-color: #9EC49F;
-  border-color: #9EC49F; }
+  -gtk-secondary-caret-color: #c8ccd6;
+  background-color: #c8ccd6;
+  border-color: #c8ccd6; }
 
 .VolSliderBox {
   background-color: #262626;

@@ -57,7 +57,7 @@ function TheBoxThatContainsAllWidgets(){
 // there needs to be only one instance
 export const controlPanel = Widget.Window({
     class_name: "controlPanel",
-    margins: [8],
+    margins: [10],
     name: "ControlPanelWindow",
     setup: self => {
         self.keybind("Escape", () => {

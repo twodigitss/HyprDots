@@ -4,7 +4,7 @@ export const calendar = Widget.Calendar({
     showDayNames: true,
     showDetails: false,
     showHeading: true,
-    showWeekNumbers: true,
+    showWeekNumbers: false,
     detail: (self, y, m, d) => {
         return `<span color="white">${y}. ${m}. ${d}.</span>`
     },

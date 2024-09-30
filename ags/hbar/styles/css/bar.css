@@ -7,15 +7,19 @@
 $seco_col: map-get(map-get($mountainfuji, accents), kusa);
 $thir_col: map-get(map-get($gruvbox, dark), blue);
 */
-/*$main_col: map-get(map-get($nord, Aurora), purple);
+/*$main_col: map-get(map-get($catpuccin, macchiato), Pink);
 $seco_col: map-get(map-get($catpuccin, macchiato), Pink);
-$thir_col: map-get(map-get($mountainfuji, accents), sakura);
-*/
-/*$main_col: map-get(map-get($nord, Frost), sky);
-$seco_col: map-get(map-get($mountainfuji, accents), kori);
-$thir_col: map-get(map-get($catpuccin, macchiato), blue);
+$thir_col: map-get(map-get($catpuccin, macchiato), Pink);
 */
 /**/
+/*$main_col : map-get(map-get($catpuccin, macchiato), Peach);
+$seco_col : $main_col;
+$thir_col : map-get(map-get($mountainfuji, accents), yuyake);
+*/
+/*$main_col: map-get(map-get($catpuccin, macchiato), Flamingo);
+$seco_col: map-get(map-get($catpuccin, macchiato), Rosewater);
+$thir_col: map-get(map-get($biscuit, dark), ChampagnePink);
+*/
 /*#########################
 ###      DEFAULTS       ###
 ##########################*/
@@ -30,7 +34,8 @@ window.bar {
   background-color: #191919;
   color: #fffeee;
   box-shadow: -2px -2px 2px #2a2a2a;
-  border-right: 0px solid #2d2d2d; }
+  border-right: 0px solid #2d2d2d;
+  font-size: 13px; }
 
 label {
   font-weight: bold; }
@@ -43,12 +48,10 @@ button {
 ###     TAB WIDGETS     ###
 ##########################*/
 .tabLabel {
-  margin: 5px 0px 5px 0px;
-  border-radius: 5px 0px 0px 5px; }
+  margin: 5px 0px 5px 0px; }
 
 .tabIcon {
   margin: 5px 0px 5px 0px;
-  border-radius: 0px 5px 5px 0px;
   box-shadow: inset 2px 2px 2px transparent; }
 
 /*#########################
@@ -57,12 +60,12 @@ button {
 .workspaces {
   background-color: #252525;
   padding: 0px 0px 0px 0px;
-  border-radius: 5px; }
+  border-radius: 10px 10px 10px 10px; }
 
 .workspaces button.focused {
   padding: 0px;
-  background-color: #f0c6c6;
-  border-radius: 5px;
+  background-color: #8aadf4;
+  border-radius: 10px 10px 10px 10px;
   color: black;
   box-shadow: inset 2px 2px 2px transparent;
   /*border-left: 2px solid #555555;
@@ -75,15 +78,27 @@ button {
   /*box-shadow: inset 2px 4px 8px #121212;*/ }
 
 .workspaceLB {
-  padding: 03px 10px 03px 10px;
-  border-radius: 010px 010px 010px 010px; }
+  padding: 03px 10px 03px 10px; }
+
+.workspacesInd button {
+  padding: 0px;
+  color: black; }
+
+.workspacesInd button.focused {
+  background-color: #A5B4CB; }
+
+.workspacesInd button.static {
+  background-color: #232323; }
+
+.workspacesInd button.occupied {
+  background-color: #323232; }
 
 /*#########################
 ###      BATTERIES      ###
 ##########################*/
 levelbar block {
   background-color: transparent;
-  border-radius: 5px; }
+  border-radius: 10px 10px 10px 10px; }
 
 levelbar trough {
   background-color: transparent;
@@ -91,14 +106,13 @@ levelbar trough {
 
 levelbar .empty {
   background-color: #2d2d2d;
-  border: 0px solid transparent; }
+  border: 1px solid #2d2d2d; }
 
 levelbar .filled {
-  margin: 1px;
+  background-color: #A5B4CB;
   border: 0px solid transparent;
-  background-color: #f4dbd6;
-  -gtk-secondary-caret-color: #f0c6c6;
-  box-shadow: inset 2px 2px 2px 2px transparent; }
+  -gtk-secondary-caret-color: #88C0D0;
+  margin: 1px; }
 
 .BatteryBox .verticalBatteryIcon {
   margin-right: 7px; }
@@ -118,10 +132,11 @@ levelbar .filled {
 .Media {
   margin: 5px;
   padding: 3px 5px 3px 5px;
-  border-radius: 10px; }
+  background-color: #252525;
+  border-radius: 10px 10px 10px 10px; }
 
 .MediaButton {
   padding: 0px 3px 0px 3px;
-  border-radius: 50px;
+  border-radius: 10px 10px 10px 10px;
   box-shadow: inset 2px 2px 2px transparent;
   border: 0px solid transparent; }

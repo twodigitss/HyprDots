@@ -2,11 +2,12 @@ import { config } from "./variables.js"
 import { SessionButtons } from "./modules/panel/Session.js"
 import { Applauncher } from "./modules/panel/AppFinder.js"
 import { calendar } from "./modules/panel/Calendar.js"
-import { SysTray } from "./modules/bar/SysTray.js" 
 import { Volslider } from "./modules/bar/Sliders.js"
 import { Workspaces } from "./modules/bar/workspaces.js" 
 import { myIdentity } from "./modules/bar/UserBadge.js"
 //import { pfbutton } from "./modules/panel/powerProfile.js"
+import { vol, bri } from "./modules/bar/vol_bri_bar.js"
+import { SysTray } from "./modules/bar/SysTray.js" 
 
 //import { Volslider } from "./modules/panel/Sliders.js"
 //import { myIdentity } from "./modules/panel/UserBadge.js"
@@ -19,43 +20,50 @@ const topp = Widget.Box({
     vpack: "start",
     spacing: 10,
     children: [
+        //vol,
         myIdentity,
-        Workspaces(),
-        Applauncher({ width: 150, height: 200 }),
+        Applauncher({ width: 100, height: 135 }),
     ]
 })  
 
 const middle = Widget.Box({
-    vertical:true,
+    vertical:false,
     vpack: "center",
     spacing: 10,
     children: [
-        /*SysTray({
-            verticality: false, 
-            orientation: "center"
-        }),*/
+        SysTray({vert: true}),
     ],
 })
 
 const bottom = Widget.Box({
     spacing: 10,
-    vpack:"end",
+    hpack:"start",
     vertical: true,
     children: [
-        //pfbutton,
-        calendar,
+        //bri,
+        Workspaces(),
         SessionButtons(),
+        calendar,
+        //pfbutton,
     ],
         
 })
 
+const asd = Widget.Box({
+    vertical: false,
+    vpack: "center",
+    spacing: 10,
+        children:[topp, bottom],
+})
+
 function TheBoxThatContainsAllWidgets(){
     return Widget.CenterBox({
-        vertical: true,
+        vertical: false,
+        spacing: 10,
         css: `margin: 15px;`,
-        start_widget: topp,
+        start_widget: asd,
         center_widget: middle,
-        end_widget: bottom,
+        //end_widget: bottom,
 
     })
 }
@@ -63,7 +71,7 @@ function TheBoxThatContainsAllWidgets(){
 // there needs to be only one instance
 export const controlPanel = Widget.Window({
     class_name: "controlPanel",
-    margins:[5],
+    margins:[5,5,5,5],
     name: "panelWindow",
     setup: self => {
         self.keybind("Escape", () => {
@@ -74,7 +82,7 @@ export const controlPanel = Widget.Window({
         })
     },
     visible: false,
-    anchor: [ "left", "top", "bottom"],
+    anchor: [ "left", "bottom"],
     keymode: "exclusive",
     child: TheBoxThatContainsAllWidgets(),
 })

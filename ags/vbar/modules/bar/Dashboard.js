@@ -3,8 +3,8 @@ import {icons} from "../../variables.js"
 /* widget+icon=widcon get it? haha */
 function widcon( route ) { 
     return Widget.Icon({ 
+        class_name: "Dashboard_button_img",
         icon: route, 
-        css: "margin: 0px 0px 0px 0px;",
         size: 25,
     })
 }

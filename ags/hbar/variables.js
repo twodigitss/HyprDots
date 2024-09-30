@@ -7,7 +7,6 @@ export const icons = {
     "next":    config + "/ags/Assets/icons/next.png",
     "prev":    config + "/ags/Assets/icons/prev.png",
     "exit":    config + "/ags/Assets/icons/Exit.png",
-    "cancell": config + "/ags/Assets/icons/quit.png",
     "suspend": config + "/ags/Assets/icons/sleep.png",
     "time":    config + "/ags/Assets/icons/clock.png",
     "reboot":  config + "/ags/Assets/icons/reboot.png",
@@ -15,8 +14,6 @@ export const icons = {
     "drawer":  config + "/ags/Assets/icons/app-menu.png",
     "drawer2":  config + "/ags/Assets/icons/app-menu-bkp.png",
     "turnoff": config + "/ags/Assets/icons/poweroff.png",
-    "worksp":  config + "/ags/Assets/icons/workspace.png",
-    "menu":    config + "/ags/Assets/icons/app-menu-2.png",
 };
 
 export const comm = {
@@ -24,7 +21,7 @@ export const comm = {
     "suspend": "systemctl suspend",
     "turnoff": "systemctl poweroff",
     "killhypr": "hyprctl dispatch exit",
-    "time": Variable("", { poll: [1000, 'date "+%H:%M"'] }),
-    "date": Variable("", { poll: [1000, 'date "+%a %d %b "'] }),
-    "dt": Variable("", { poll: [1000, 'date "+%b %d  %H:%M"'] }),
+    "time": Variable("", { poll: [1000,'date "+%H:%M"'] }),
+    "date": Variable("", { poll: [1000,'date "+%a %d %b "'] }),
+    "dt": Variable("", { poll: [1000,'date "+%b %d  %H:%M"'] }),
 }

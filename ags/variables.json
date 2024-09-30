@@ -1,0 +1,38 @@
+{
+
+    "config": "/home/ludwig/.config",
+
+    "icons":{
+        "user":    "{config}/ags/Assets/profile.jpg",
+        "menu1":   "{config}/ags/Assets/icons/app-menu.png",
+        "menu2":   "{config}/ags/Assets/icons/app-menu-bkp.png",
+        
+        "play":    "{config}/ags/Assets/icons/play.png",
+        "next":    "{config}/ags/Assets/icons/next.png",
+        "prev":    "{config}/ags/Assets/icons/prev.png",
+        
+        "turnoff": "{config}/ags/Assets/icons/poweroff.png",
+        "suspend": "{config}/ags/Assets/icons/sleep.png",
+        "reboot":  "{config}/ags/Assets/icons/reboot.png",
+        "exit":    "{config}/ags/Assets/icons/Exit.png",
+        
+        "time":    "{config}/ags/Assets/icons/clock.png",
+        "date":    "{config}/ags/Assets/icons/calendar.png"
+    },
+
+    "comm":{
+        "turnoff":  "systemctl poweroff",
+        "reboot":   "systemctl reboot",
+        "suspend":  "systemctl suspend",
+        "killhypr": "hyprctl dispatch exit",
+        "htime":    "date '+%H:%M'",
+        "hdate":    "date '+%a %d %b '",
+        "hdt":      "date '+%b %d  %H:%M'",
+        "vtime":    "date '+%H\n%M'",
+        "vdate":    "date '+%b\n%d\n%y'"
+    
+    }
+
+
+
+}
