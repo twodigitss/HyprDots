@@ -2,8 +2,7 @@
 ###     C O L O R S     ###
 ##########################*/
 
-@import "../styles/variables.scss";
-$rb: 10px;
+@import "./variables.scss";
 
 /*#########################
 ###      DEFAULTS       ###
@@ -24,6 +23,7 @@ button {
     background-color: #1f1f1f;
     border: 0px solid #444444;
     border-radius: $rb $rb $rb $rb;
+    font-size: 12px;
 }
 
 /*#########################
@@ -45,8 +45,10 @@ button {
 .AppLauncherTypeInBox{
     //margin-bottom: 10px;
     border-radius: $rb;
-    background-color: #262626;
+    font-size: 12px;
+    background-color: transparent;
     border: 1px solid $thir_col;
+    box-shadow: 0px 0px 0px transparent
 }
 
 /*#########################
@@ -64,7 +66,7 @@ button {
     background-color: #c8ccd6;
     //border-radius: 10px;
     border-radius: $rb;
-    padding: 4px;
+    padding: 4px 6px 4px 6px;
     //margin: 2px 0px 2px 0px;
 }
 
@@ -73,16 +75,12 @@ button {
 ##########################*/
 
 .WHOAMI{
-    background-color: #262626;
+    background-color: $bar_fg;
     //padding: 3px 10px 3px 10px;
-    padding: 5px;
-    font-size: 14px;
-    margin: 0px 0px 2px 0px;
+    padding: 0px 15px 0px 15px;
+    font-size: 13px;
+    margin: 0px;
     border-radius: $rb;
-}
-
-.WHOAMI_PFP{
-    //border: 0px solid white;
 }
 
 .sessionBox{

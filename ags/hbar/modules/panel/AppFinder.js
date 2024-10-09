@@ -6,13 +6,13 @@ const AppItem = app => Widget.Button({
     attribute: { app },
     child: Widget.Box({
         children: [
-            /*Widget.Icon({
+            Widget.Icon({
                 icon: app.icon_name || " ",
-                size: 20,
-            }),*/
+                size: 15,
+            }),
             Widget.Label({
                 class_name: "AppLauncherApptitle",
-                label: "  " + app.name,
+                label: "   " + app.name,
                 xalign: 0,
                 vpack: "center",
                 truncate: "end",
@@ -40,10 +40,10 @@ function repopulate() {
 }
 
 // search entry
-const entry = Widget.Entry({
+export const entry = Widget.Entry({
     class_name: "AppLauncherTypeInBox",
     hexpand: true,
-    css: `margin-bottom: 5px;`,
+    //css: `margin-bottom: 5px;`,
 
     // to launch the first item on Enter
     on_accept: () => {
@@ -74,7 +74,7 @@ export const Applauncher = ({ width = 200, height = 250}) => {
                 vertical: true,
                 spacing: 5,
                 children: [
-                    entry,
+                    //entry,
                     Widget.Scrollable({
                         visible: false,
                         hscroll: "never",

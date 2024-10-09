@@ -3,13 +3,14 @@ import { NotificationPopups } from "./notificationPopups.js"
 import { controlPanel } from "./panel.js"
 //import { config } from "../variables.json" 
 
-import { comm, config } from "./variables.js"
+import { comm, config, gtk, cursor, barPos } from "./variables.js"
 import { Battery } from "./modules/bar/battery.js"
 import { tdNoIcon } from "./modules/bar/datetime.js"
 import { Dashboard } from "./modules/bar/Dashboard.js"
 import { Media } from "./modules/bar/Media.js"
 import { SysTray } from "./modules/bar/SysTray.js" 
 import { vol, bri } from "./modules/bar/vol_bri_bar.js"
+import { WorkspacesInd } from "./modules/bar/workspaces.js"
 
 
 // BASICALLY EVERY BOX FOR WIDGETS WERE THE SAME
@@ -41,8 +42,10 @@ const start  = [
 ]
 const center = [  
         //vol, bri
+        //WorkspacesInd()
 ]
 const bottom = [
+    Widget.Separator({widthRequest: 0}),
     Battery(),
     tdNoIcon(comm["date"]),
     tdNoIcon(comm["time"]),
@@ -56,7 +59,7 @@ function StatusBar() {
         class_name: "bar",
         monitor: 0,
         //margins:[5],
-        anchor: ["bottom", "left", "right"],
+        anchor: [barPos, "left", "right"],
         exclusivity: "exclusive",
         child: Widget.CenterBox({
             start_widget: wibox( start , "start", 0 ),
@@ -65,7 +68,6 @@ function StatusBar() {
         }),
     })
 }
-// CONFIGURATION
 
 // make sure sassc is installed on your system
 const thisDir = `${config}/ags/hbar`
@@ -73,17 +75,16 @@ const scss = `${thisDir}/styles/bar.scss`
 const css = `${thisDir}/styles/css/bar.css`
 Utils.exec(`sassc ${scss} ${css}`)
 
+// CONFIGURATION
 App.config({
     style: css,
+    gtkTheme: gtk,
+    cursorTheme: cursor,
     windows: [
         StatusBar(),
         NotificationPopups(),
         controlPanel,
     ],
-    gtkTheme: "ArchLabs-Dark",
-    //cursorTheme: "macOS-Monterey-White",
-    cursorTheme: "macOS-BigSur-White",
-    //cursorTheme: "GoogleDot-White",
 })
 
 export {}

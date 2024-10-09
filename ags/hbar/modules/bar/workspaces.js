@@ -24,10 +24,9 @@ export function Workspaces(){
   //const workspaces = ["一", "二", "三", "四"];
   const workspaces = ["1","2","3","4"];
   return Widget.Box({
-    vertical: false,
+    vertical: true,
     class_name: 'workspaces',
     homogeneous: true,
-    vpack: "center",
     spacing: 0,
     children: workspaces.map((label, index) => {
       const wsId = index + 1;
@@ -67,7 +66,7 @@ export function WorkspacesInd(){
       const wsId = index + 1;
       const updateClassName = (self) => {
         if (hyprland.active.workspace.id === wsId) {
-          self.widthRequest = 35, 
+          self.widthRequest = 45, 
           self.class_name = "focused";
         } 
         else {

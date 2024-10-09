@@ -16,7 +16,8 @@ function SButton(route,command) {
 export function SessionButtons(){
     return Widget.Box({
         class_name: "sessionBox",
-        vertical: false,
+        vertical: true,
+        hpack: "center",
         homogeneous: true,
         spacing: 0,
         children: [

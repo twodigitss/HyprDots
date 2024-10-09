@@ -7,6 +7,14 @@
 $seco_col: map-get(map-get($mountainfuji, accents), kusa);
 $thir_col: map-get(map-get($gruvbox, dark), blue);
 */
+/*$main_col: map-get(map-get($nord, Frost), sky);
+$seco_col: map-get(map-get($mountainfuji, accents), kori);
+$thir_col: map-get(map-get($catpuccin, macchiato), blue);
+*/
+/*$main_col: map-get(map-get($catpuccin, macchiato), Flamingo);
+$seco_col: map-get(map-get($catpuccin, macchiato), Rosewater);
+$thir_col: map-get(map-get($biscuit, dark), ChampagnePink);
+*/
 /*$main_col: map-get(map-get($catpuccin, macchiato), Pink);
 $seco_col: map-get(map-get($catpuccin, macchiato), Pink);
 $thir_col: map-get(map-get($catpuccin, macchiato), Pink);
@@ -15,10 +23,6 @@ $thir_col: map-get(map-get($catpuccin, macchiato), Pink);
 /*$main_col : map-get(map-get($catpuccin, macchiato), Peach);
 $seco_col : $main_col;
 $thir_col : map-get(map-get($mountainfuji, accents), yuyake);
-*/
-/*$main_col: map-get(map-get($catpuccin, macchiato), Flamingo);
-$seco_col: map-get(map-get($catpuccin, macchiato), Rosewater);
-$thir_col: map-get(map-get($biscuit, dark), ChampagnePink);
 */
 /*#########################
 ###      DEFAULTS       ###
@@ -59,13 +63,11 @@ button {
 ##########################*/
 .workspaces {
   background-color: #252525;
-  padding: 0px 0px 0px 0px;
-  border-radius: 10px 10px 10px 10px; }
+  border-radius: 0px 0px 0px 0px; }
 
 .workspaces button.focused {
-  padding: 0px;
-  background-color: #8aadf4;
-  border-radius: 10px 10px 10px 10px;
+  background-color: #FB616A;
+  border-radius: 0px 0px 0px 0px;
   color: black;
   box-shadow: inset 2px 2px 2px transparent;
   /*border-left: 2px solid #555555;
@@ -82,10 +84,11 @@ button {
 
 .workspacesInd button {
   padding: 0px;
-  color: black; }
+  color: black;
+  border-radius: 5px; }
 
 .workspacesInd button.focused {
-  background-color: #A5B4CB; }
+  background-color: #ed8796; }
 
 .workspacesInd button.static {
   background-color: #232323; }
@@ -98,7 +101,7 @@ button {
 ##########################*/
 levelbar block {
   background-color: transparent;
-  border-radius: 10px 10px 10px 10px; }
+  border-radius: 0px 0px 0px 0px; }
 
 levelbar trough {
   background-color: transparent;
@@ -109,13 +112,13 @@ levelbar .empty {
   border: 1px solid #2d2d2d; }
 
 levelbar .filled {
-  background-color: #A5B4CB;
+  background-color: #ed8796;
   border: 0px solid transparent;
-  -gtk-secondary-caret-color: #88C0D0;
+  -gtk-secondary-caret-color: #FB4934;
   margin: 1px; }
 
 .BatteryBox .verticalBatteryIcon {
-  margin-right: 7px; }
+  margin: 0px 7px 0px 7px; }
 
 /*UNUSED*/
 .circularBattery {
@@ -133,10 +136,10 @@ levelbar .filled {
   margin: 5px;
   padding: 3px 5px 3px 5px;
   background-color: #252525;
-  border-radius: 10px 10px 10px 10px; }
+  border-radius: 0px 0px 0px 0px; }
 
 .MediaButton {
   padding: 0px 3px 0px 3px;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 0px 0px 0px 0px;
   box-shadow: inset 2px 2px 2px transparent;
   border: 0px solid transparent; }

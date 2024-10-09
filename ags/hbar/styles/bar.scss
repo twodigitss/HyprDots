@@ -4,7 +4,6 @@
 
 /*  Mocha */
 @import "./variables.scss";
-$rb: 10px;
 
 /*#########################
 ###      DEFAULTS       ###
@@ -60,15 +59,11 @@ button {
 
 .workspaces{
     background-color: $bar_fg;
-    padding: 0px 0px 0px 0px ;
-    //margin: 7px;
     border-radius: $rb $rb $rb $rb;
 }
 
 .workspaces button.focused {
-    padding: 0px;
     background-color: $thir_col;
-    //border-radius: 10px;
     border-radius: $rb $rb $rb $rb;
     color: black;
     box-shadow: inset 2px 2px 2px transparent;
@@ -94,7 +89,7 @@ button {
 .workspacesInd button{
     padding: 0px;
     color: black;
-    //border-radius: 10px;
+    border-radius: 5px;
 }
     
 .workspacesInd button.focused{
@@ -138,12 +133,8 @@ levelbar .filled {
 
 }
 
-.BatteryBox{ 
-    //margin: 10px; 
-}
-
 .BatteryBox .verticalBatteryIcon{ 
-    margin-right: 7px; 
+    margin: 0px 7px 0px 7px; 
 }
 
 /*UNUSED*/

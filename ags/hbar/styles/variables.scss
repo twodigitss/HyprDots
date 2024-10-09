@@ -1,6 +1,9 @@
 /* DECLARACIONES GENERALES*/
 @import "./colorsheet.scss";
 
+//Rounded borders
+$rb: 0px;
+
 //basic three black colors
 $bar_bg: #191919;
 $bar_fg: #252525;
@@ -12,16 +15,28 @@ $seco_col: map-get(map-get($mountainfuji, accents), kusa);
 $thir_col: map-get(map-get($gruvbox, dark), blue);
 */
 
+// Blue colorscheme
+/*$main_col: map-get(map-get($nord, Frost), sky);
+$seco_col: map-get(map-get($mountainfuji, accents), kori);
+$thir_col: map-get(map-get($catpuccin, macchiato), blue);
+*/
+
+// Peach Theme
+/*$main_col: map-get(map-get($catpuccin, macchiato), Flamingo);
+$seco_col: map-get(map-get($catpuccin, macchiato), Rosewater);
+$thir_col: map-get(map-get($biscuit, dark), ChampagnePink);
+*/
+
 //Purple colorscheme
 /*$main_col: map-get(map-get($catpuccin, macchiato), Pink);
 $seco_col: map-get(map-get($catpuccin, macchiato), Pink);
 $thir_col: map-get(map-get($catpuccin, macchiato), Pink);
 */
 
-// Blue colorscheme
-$main_col: map-get(map-get($nord, Frost), sky);
-$seco_col: map-get(map-get($mountainfuji, accents), kori);
-$thir_col: map-get(map-get($catpuccin, macchiato), blue);
+//RED
+$main_col: map-get(map-get($gruvbox, dark), red);
+$seco_col: map-get(map-get($catpuccin, macchiato), red);
+$thir_col: map-get(map-get($nord, Aurora), red);
 /**/
 
 //Orange colorscheme
@@ -30,8 +45,3 @@ $seco_col : $main_col;
 $thir_col : map-get(map-get($mountainfuji, accents), yuyake);
 */
 
-// Peach Theme
-/*$main_col: map-get(map-get($catpuccin, macchiato), Flamingo);
-$seco_col: map-get(map-get($catpuccin, macchiato), Rosewater);
-$thir_col: map-get(map-get($biscuit, dark), ChampagnePink);
-*/

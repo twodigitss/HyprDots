@@ -6,6 +6,14 @@
 $seco_col: map-get(map-get($mountainfuji, accents), kusa);
 $thir_col: map-get(map-get($gruvbox, dark), blue);
 */
+/*$main_col: map-get(map-get($nord, Frost), sky);
+$seco_col: map-get(map-get($mountainfuji, accents), kori);
+$thir_col: map-get(map-get($catpuccin, macchiato), blue);
+*/
+/*$main_col: map-get(map-get($catpuccin, macchiato), Flamingo);
+$seco_col: map-get(map-get($catpuccin, macchiato), Rosewater);
+$thir_col: map-get(map-get($biscuit, dark), ChampagnePink);
+*/
 /*$main_col: map-get(map-get($catpuccin, macchiato), Pink);
 $seco_col: map-get(map-get($catpuccin, macchiato), Pink);
 $thir_col: map-get(map-get($catpuccin, macchiato), Pink);
@@ -14,10 +22,6 @@ $thir_col: map-get(map-get($catpuccin, macchiato), Pink);
 /*$main_col : map-get(map-get($catpuccin, macchiato), Peach);
 $seco_col : $main_col;
 $thir_col : map-get(map-get($mountainfuji, accents), yuyake);
-*/
-/*$main_col: map-get(map-get($catpuccin, macchiato), Flamingo);
-$seco_col: map-get(map-get($catpuccin, macchiato), Rosewater);
-$thir_col: map-get(map-get($biscuit, dark), ChampagnePink);
 */
 /*#########################
 ###      DEFAULTS       ###
@@ -33,7 +37,8 @@ button {
   /*idk if those two thing do work*/
   background-color: #1f1f1f;
   border: 0px solid #444444;
-  border-radius: 10px 10px 10px 10px; }
+  border-radius: 0px 0px 0px 0px;
+  font-size: 12px; }
 
 /*#########################
 ###     APPLAUNCHER     ###
@@ -43,15 +48,17 @@ button {
   background-color: #262626;
   border-radius: 0px;
   /*border: 1px solid #444444;*/
-  border-radius: 10px 10px 10px 10px; }
+  border-radius: 0px 0px 0px 0px; }
 
 .AppLauncherApptitle {
   font-size: 12px; }
 
 .AppLauncherTypeInBox {
-  border-radius: 10px;
-  background-color: #262626;
-  border: 1px solid #8aadf4; }
+  border-radius: 0px;
+  font-size: 12px;
+  background-color: transparent;
+  border: 1px solid #FB616A;
+  box-shadow: 0px 0px 0px transparent; }
 
 /*#########################
 ###       BUTTON        ###
@@ -59,27 +66,27 @@ button {
 .Dashboard_button {
   /*background-color: #262626;
     border-radius: 10px;*/
-  border-radius: 10px;
+  border-radius: 0px;
   margin: 0px 4px 0px 4px; }
 
 .sessionButton {
   background-color: #c8ccd6;
-  border-radius: 10px;
-  padding: 4px; }
+  border-radius: 0px;
+  padding: 4px 6px 4px 6px; }
 
 /*#########################
 ###      USER BAGDE     ###
 ##########################*/
 .WHOAMI {
-  background-color: #262626;
-  padding: 5px;
-  font-size: 14px;
-  margin: 0px 0px 2px 0px;
-  border-radius: 10px; }
+  background-color: #252525;
+  padding: 0px 15px 0px 15px;
+  font-size: 13px;
+  margin: 0px;
+  border-radius: 0px; }
 
 .sessionBox {
   background-color: #262626;
-  border-radius: 10px;
+  border-radius: 0px;
   /*border: 1px solid #444444;*/ }
 
 /*#########################
@@ -89,9 +96,9 @@ button {
   background-color: #262626;
   border: none;
   box-shadow: none;
-  border-radius: 10px 10px 10px 10px;
+  border-radius: 0px 0px 0px 0px;
   font-size: 13px;
-  -gtk-secondary-caret-color: #88C0D0;
+  -gtk-secondary-caret-color: #FB4934;
   font-style: normal; }
 
 /*#########################
@@ -103,9 +110,9 @@ slider {
   border-color: transparent; }
 
 scale highlight {
-  -gtk-secondary-caret-color: #88C0D0;
-  background-color: #88C0D0;
-  border-color: #88C0D0; }
+  -gtk-secondary-caret-color: #FB4934;
+  background-color: #FB4934;
+  border-color: #FB4934; }
 
 .VolSliderBox {
   background-color: #262626;
@@ -113,4 +120,4 @@ scale highlight {
 
 .laweatray {
   background-color: #252525;
-  border-radius: 10px 10px 10px 10px; }
+  border-radius: 0px 0px 0px 0px; }

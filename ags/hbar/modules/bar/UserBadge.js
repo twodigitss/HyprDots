@@ -12,7 +12,7 @@ function widcon( route ) {
 export const myIdentity = Widget.CenterBox({
     class_name: "WHOAMI",
     spacing: 10,
-    start_widget: widcon(icons["user"]),
+    //start_widget: widcon(icons["user"]),
     center_widget: Widget.Label({
         justification: "center",
         label: "Ludwig@NixOS"

@@ -13,10 +13,10 @@ export function SysTray({ vert=false, orient="center" }) {
 
     return Widget.Box({
         class_name: "laweatray",
+        spacing: 5,
         vpack: orient,
-        vexpand: true,
         vertical: vert,
-        heightRequest: 235,
+        heightRequest: 195,
         children: items,
     })
 }

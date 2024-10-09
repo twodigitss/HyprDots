@@ -1,5 +1,10 @@
-export const config = 
-"/home/ludwig/.config"
+//Some constants and variables across the config files
+export const config = "/home/ludwig/.config"
+export const barPos = "bottom"
+export const gtk = "ArchLabs-Dark"
+export const cursor = "macOS-Monterey-White"
+//cursorTheme: "macOS-Monterey-White",
+//cursorTheme: "GoogleDot-White",
 
 export const icons = {
     "user":    config + "/ags/Assets/profile.jpg",
